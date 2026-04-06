@@ -1562,7 +1562,7 @@
     <main class="content">
       <section class="hero reveal" id="home">
         <div class="hero-stage">
-          <video class="hero-video" autoplay muted loop playsinline poster="images/work-1.png">
+          <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="images/work-1.png">
             <source src="videos/reel-loop.mp4" type="video/mp4">
           </video>
           <div class="hero-overlay"></div>
@@ -1685,7 +1685,7 @@
             <article class="work-card large">
               <div class="work-media">
                 <img src="images/work-1.png" alt="2024 reel">
-                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline webkit-playsinline preload="auto" data-video>
                   <source src="videos/reel-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1702,7 +1702,7 @@
             <article class="work-card medium">
               <div class="work-media">
                 <img src="images/work-2.png" alt="Dance performance project">
-                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline webkit-playsinline preload="auto" data-video>
                   <source src="videos/work-2-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1719,7 +1719,7 @@
             <article class="work-card medium">
               <div class="work-media">
                 <img src="images/work-3-new.png" alt="Multicam Taaffe College project">
-                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline webkit-playsinline preload="auto" data-video>
                   <source src="videos/work-3-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1736,7 +1736,7 @@
             <article class="work-card large">
               <div class="work-media">
                 <img src="images/work-4-new.png" alt="Theatre production project">
-                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline webkit-playsinline preload="auto" data-video>
                   <source src="videos/work-4-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1753,7 +1753,7 @@
             <article class="work-card wide">
               <div class="work-media">
                 <img src="images/work-5.png" alt="Feature film project">
-                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline webkit-playsinline preload="auto" data-video>
                   <source src="videos/work-5-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1770,7 +1770,7 @@
             <article class="work-card tall">
               <div class="work-media">
                 <img src="images/work-6.png" alt="Music video project">
-                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline webkit-playsinline preload="auto" data-video>
                   <source src="videos/work-6-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1787,7 +1787,7 @@
             <article class="work-card tall">
               <div class="work-media">
                 <img src="images/work-7.png" alt="Branded commercial project">
-                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline webkit-playsinline preload="auto" data-video>
                   <source src="videos/work-7-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1804,7 +1804,7 @@
             <article class="work-card wide">
               <div class="work-media">
                 <img src="images/work-8.png" alt="Dance film project">
-                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline webkit-playsinline preload="auto" data-video>
                   <source src="videos/work-8-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -2151,10 +2151,17 @@
     };
 
     video.muted = true;
+    video.defaultMuted = true;
+    video.autoplay = true;
+    video.loop = true;
+    video.playsInline = true;
     video.setAttribute("muted", "");
     video.setAttribute("playsinline", "");
+    video.setAttribute("webkit-playsinline", "");
+    video.load();
     tryPlay();
     video.addEventListener("loadedmetadata", tryPlay, { once: true });
+    video.addEventListener("canplay", tryPlay, { once: true });
   });
 
   const mobileVideoObserver = new IntersectionObserver((entries) => {
@@ -2163,9 +2170,11 @@
     entries.forEach((entry) => {
       const card = entry.target;
       const video = card.querySelector("[data-video]");
-      if (!video || !card.classList.contains("has-video")) return;
+      if (!video) return;
 
       if (entry.isIntersecting) {
+        card.classList.add("has-video");
+        video.style.display = "block";
         const playAttempt = video.play();
         card.classList.add("is-playing");
         if (playAttempt && typeof playAttempt.catch === "function") {
