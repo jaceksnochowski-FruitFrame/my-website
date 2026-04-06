@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jacek Snochowski | Director of Photography, Dublin</title>
-<meta name="description" content="Jacek Snochowski is a Dublin-based Director of Photography specialising in commercials, branded content, music, theatre, performance, short films, and narrative work.">
-<meta name="keywords" content="Jacek Snochowski, cinematographer Dublin, director of photography Dublin, DOP Ireland, steadicam operator Dublin">
+<title>Jacek Snochowski | Commercial Director of Photography Dublin</title>
+<meta name="description" content="Jacek Snochowski is a Dublin-based Director of Photography for commercials, branded films, performance-led projects, and movement-heavy work across Ireland and internationally.">
+<meta name="keywords" content="Jacek Snochowski, cinematographer Dublin, director of photography Dublin, commercial DOP Ireland, movement cinematography, steadicam operator Dublin">
 <meta name="theme-color" content="#0a0a0a">
 <link rel="canonical" href="https://jaceksnochowski.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0a0a0a;
@@ -605,6 +605,189 @@
     color:rgba(242,237,229,0.78);
   }
 
+  .trust{
+    padding:0 var(--gutter) var(--section-pad);
+  }
+
+  .trust-band{
+    width:min(calc(100% - 0rem), var(--max));
+    margin:0 auto;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(242,237,229,0.03), rgba(242,237,229,0.01));
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+
+  .trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+  }
+
+  .trust-item{
+    padding:1.2rem 1.25rem;
+    border-right:1px solid var(--line);
+    display:grid;
+    gap:0.45rem;
+  }
+
+  .trust-item:last-child{
+    border-right:none;
+  }
+
+  .trust-item strong{
+    font-family:var(--headline);
+    font-size:1rem;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+  }
+
+  .trust-item span{
+    color:var(--muted);
+    line-height:1.6;
+    font-size:0.92rem;
+  }
+
+  .services,
+  .case-studies{
+    padding-top:var(--section-pad);
+    padding-bottom:var(--section-pad);
+  }
+
+  .service-grid,
+  .case-grid{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:1rem;
+  }
+
+  .service-card,
+  .case-card{
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(242,237,229,0.03), rgba(242,237,229,0.01));
+    padding:1.35rem;
+    box-shadow:var(--shadow);
+    display:grid;
+    gap:0.95rem;
+  }
+
+  .service-card h3,
+  .case-card h3{
+    margin:0;
+    font-family:var(--headline);
+    font-size:clamp(1.2rem, 1.8vw, 1.7rem);
+    line-height:1.02;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+  }
+
+  .service-card p,
+  .case-card p{
+    margin:0;
+    color:var(--muted);
+    line-height:1.75;
+  }
+
+  .service-card ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:0.75rem;
+  }
+
+  .service-card li{
+    color:var(--muted);
+    line-height:1.65;
+    padding-top:0.75rem;
+    border-top:1px solid rgba(242,237,229,0.08);
+  }
+
+  .service-card li:first-child{
+    border-top:none;
+    padding-top:0;
+  }
+
+  .case-label{
+    color:var(--accent);
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+    font-size:0.7rem;
+  }
+
+  .case-meta{
+    display:grid;
+    gap:0.7rem;
+    padding-top:0.9rem;
+    border-top:1px solid rgba(242,237,229,0.08);
+  }
+
+  .case-meta div{
+    color:var(--muted);
+    line-height:1.65;
+    font-size:0.94rem;
+  }
+
+  .case-meta strong{
+    color:var(--text);
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    display:block;
+    margin-bottom:0.22rem;
+  }
+
+  .story-panel{
+    display:grid;
+    grid-template-columns:minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap:clamp(1.2rem, 2.4vw, 2rem);
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(242,237,229,0.03), rgba(242,237,229,0.01));
+    box-shadow:var(--shadow);
+    overflow:hidden;
+  }
+
+  .story-visual{
+    min-height:420px;
+    background:var(--panel);
+  }
+
+  .story-visual img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .story-copy{
+    padding:clamp(1.35rem, 3vw, 2.2rem);
+    display:grid;
+    gap:1rem;
+    align-content:start;
+  }
+
+  .story-copy p{
+    margin:0;
+    color:var(--muted);
+    line-height:1.8;
+    max-width:58ch;
+  }
+
+  .story-points{
+    display:grid;
+    gap:0.8rem;
+    margin-top:0.4rem;
+  }
+
+  .story-points div{
+    padding-top:0.8rem;
+    border-top:1px solid rgba(242,237,229,0.08);
+    color:var(--muted);
+    line-height:1.7;
+  }
+
+  .story-points strong{
+    color:var(--text);
+  }
+
   .about{
     padding-top:0;
     padding-bottom:var(--section-pad);
@@ -1155,6 +1338,19 @@
     }
     .contact-left{border-right:none;border-bottom:1px solid var(--line)}
     .about-visual{position:relative;top:auto}
+    .trust-grid,
+    .service-grid,
+    .case-grid,
+    .story-panel{
+      grid-template-columns:1fr;
+    }
+    .trust-item{
+      border-right:none;
+      border-bottom:1px solid var(--line);
+    }
+    .trust-item:last-child{
+      border-bottom:none;
+    }
   }
 
   @media (max-width: 900px){
@@ -1178,6 +1374,11 @@
       grid-template-columns:1fr;
     }
     .form-field.full{grid-column:auto}
+    .service-grid,
+    .case-grid,
+    .story-panel{
+      grid-template-columns:1fr;
+    }
   }
 
   @media (max-width: 640px){
@@ -1220,10 +1421,10 @@
 
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
     <a href="#home">Home</a>
+    <a href="#services">Services</a>
     <a href="#work">Work</a>
+    <a href="#approach">Approach</a>
     <a href="#about">About</a>
-    <a href="#credentials">Credentials</a>
-    <a href="#lab">Cine Lab</a>
     <a href="#contact">Contact</a>
   </nav>
 
@@ -1248,50 +1449,56 @@
           </div>
         </div>
 
-        <div class="form-grid">
-          <div class="form-field">
-            <label class="form-label" for="labFirstName">First Name</label>
-            <input class="input" id="labFirstName" type="text" placeholder="Your name" required>
-          </div>
-          <div class="form-field">
-            <label class="form-label" for="labLastName">Last Name</label>
-            <input class="input" id="labLastName" type="text" placeholder="Your surname" required>
-          </div>
-          <div class="form-field full">
-            <label class="form-label" for="labEmail">Email</label>
-            <input class="input" id="labEmail" type="email" placeholder="your@email.com" required>
-          </div>
-          <div class="form-field">
-            <label class="form-label" for="labRole">Your Role</label>
-            <select class="select" id="labRole">
-              <option>Cinematographer / DOP</option>
-              <option>Camera Operator</option>
-              <option>1st AC / Focus Puller</option>
-              <option>Gaffer / Lighting Tech</option>
-              <option>Director</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label class="form-label" for="labExperience">Experience</label>
-            <select class="select" id="labExperience">
-              <option>1–2 years</option>
-              <option>3–5 years</option>
-              <option>5–10 years</option>
-              <option>10+ years</option>
-            </select>
-          </div>
-          <div class="form-field full">
-            <label class="form-label" for="labNotes">Anything To Add?</label>
-            <textarea class="textarea" id="labNotes" placeholder="Optional"></textarea>
-          </div>
-        </div>
+        <form id="labForm">
+          <input type="hidden" name="_subject" value="Cinematography Lab Interest">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
 
-        <div class="form-actions">
-          <button class="btn" type="button" id="labSubmit">Register Interest</button>
-          <div class="form-note">This opens a pre-filled email so you can send your interest directly.</div>
-        </div>
-        <div class="success-message" id="labSuccess">Your email draft is ready. If nothing opened, email jaceksnochowski@gmail.com directly.</div>
+          <div class="form-grid">
+            <div class="form-field">
+              <label class="form-label" for="labFirstName">First Name</label>
+              <input class="input" id="labFirstName" name="first_name" type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="labLastName">Last Name</label>
+              <input class="input" id="labLastName" name="last_name" type="text" placeholder="Your surname" required>
+            </div>
+            <div class="form-field full">
+              <label class="form-label" for="labEmail">Email</label>
+              <input class="input" id="labEmail" name="email" type="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="labRole">Your Role</label>
+              <select class="select" id="labRole" name="role">
+                <option>Cinematographer / DOP</option>
+                <option>Camera Operator</option>
+                <option>1st AC / Focus Puller</option>
+                <option>Gaffer / Lighting Tech</option>
+                <option>Director</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="labExperience">Experience</label>
+              <select class="select" id="labExperience" name="experience">
+                <option>1–2 years</option>
+                <option>3–5 years</option>
+                <option>5–10 years</option>
+                <option>10+ years</option>
+              </select>
+            </div>
+            <div class="form-field full">
+              <label class="form-label" for="labNotes">Anything To Add?</label>
+              <textarea class="textarea" id="labNotes" name="notes" placeholder="Optional"></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn" type="submit" id="labSubmit">Register Interest</button>
+            <div class="form-note">This now sends directly to my email.</div>
+          </div>
+          <div class="success-message" id="labSuccess">Thanks. Your registration has been sent.</div>
+        </form>
       </div>
     </div>
   </div>
@@ -1305,29 +1512,29 @@
         </div>
         <nav class="nav" aria-label="Primary">
           <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link" href="#services">Services</a>
           <a class="nav-link" href="#work">Work</a>
+          <a class="nav-link" href="#approach">Approach</a>
           <a class="nav-link" href="#about">About</a>
-          <a class="nav-link" href="#credentials">Credentials</a>
-          <a class="nav-link" href="#lab">Cine Lab</a>
           <a class="nav-link" href="#contact">Contact</a>
         </nav>
       </div>
 
       <div class="sidebar-copy">
         <div class="role-list">
-          <div>Commercials</div>
-          <div>Branded Content</div>
-          <div>Music & Theatre</div>
-          <div>Performance & Narrative</div>
-          <div>Steadicam & Movement</div>
+          <div>Commercial DOP</div>
+          <div>Branded Films</div>
+          <div>Performance &amp; Dance</div>
+          <div>Steadicam &amp; Gimbal</div>
+          <div>Ireland / International</div>
         </div>
 
         <div class="sidebar-note">
-          <div class="footer-note">In the industry since 2005. Still learning, still growing. Based in Dublin, co-running Fade Street Studios and FruitFrame, and working across Ireland and internationally.</div>
+          <div class="footer-note">Premium cinematic work for agencies, production companies, brands, and directors. Based in Dublin, working across Ireland and internationally.</div>
           <div class="socials">
             <a href="mailto:jaceksnochowski@gmail.com">Email</a>
             <a href="https://www.instagram.com/jacekfruitframe/" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://vimeo.com/fruitframefilms" target="_blank" rel="noreferrer">Vimeo</a>
+            <a href="https://vimeo.com/showcase/12189648?share=copy&amp;fl=sm&amp;fe=fs" target="_blank" rel="noreferrer">Vimeo</a>
             <a href="https://www.linkedin.com/in/jacek-snochowski-735652273" target="_blank" rel="noreferrer">LinkedIn</a>
           </div>
         </div>
@@ -1345,36 +1552,103 @@
             <div class="hero-copy">
               <div class="hero-kicker">Director of Photography | Dublin / International</div>
               <h1 class="hero-name">Jacek<br>Snochowski</h1>
-              <p class="hero-subhead">I’m a Dublin-based Director of Photography, Steadicam operator, and gimbal operator, working across commercials, branded content, music, theatre, performance-led projects, short films, and narrative work. Movement has always been a big part of how I see the frame.</p>
+              <p class="hero-subhead">Dublin-based Director of Photography working across commercials, branded films, and performance-led projects. My background in dance shapes how I think about movement, rhythm, and how the camera sits with performance.</p>
               <div class="hero-actions">
-                <a class="btn" href="#work">View Selected Work</a>
-                <a class="ghost-btn" href="#contact">Start A Conversation</a>
+                <a class="btn" href="#contact">Get In Touch</a>
+                <a class="ghost-btn" href="#work">Watch Selected Work</a>
               </div>
             </div>
 
             <div class="hero-side">
               <div class="hero-card">
                 <div class="small-label">What I Do</div>
-                <p>I work as a Director of Photography and operator across commercials, branded content, music, theatre, performance, short films, and narrative projects, with a strong focus on movement and how images feel on set.</p>
+                <p>I work across commercials, branded films, and performance-led projects, with a strong focus on movement, rhythm, and making images that feel cinematic without losing clarity on set.</p>
               </div>
               <div class="hero-card">
-                <div class="small-label">Focused Areas</div>
+                <div class="small-label">Best Fit Projects</div>
                 <div class="pill-row">
                   <span class="pill">Commercials</span>
-                  <span class="pill">Branded</span>
-                  <span class="pill">Music</span>
-                  <span class="pill">Theatre</span>
-                  <span class="pill">Narrative</span>
+                  <span class="pill">Branded Films</span>
                   <span class="pill">Performance</span>
                   <span class="pill">Dance</span>
-                  <span class="pill">Short Films</span>
+                  <span class="pill">Music</span>
+                  <span class="pill">Narrative</span>
+                  <span class="pill">Steadicam</span>
+                  <span class="pill">Gimbal</span>
                 </div>
               </div>
               <div class="hero-footer">
-                <div class="footer-note">Based in Dublin. Working across Ireland and internationally with a movement-first approach to camera and blocking.</div>
+                <div class="footer-note">Based in Dublin. Available across Ireland and internationally for agency, brand, production company, and director-led work.</div>
                 <div class="hero-scroll">Scroll<span aria-hidden="true"></span></div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust reveal" aria-label="Trust Signals">
+        <div class="trust-band">
+          <div class="trust-grid">
+            <div class="trust-item">
+              <strong>15+ Years</strong>
+              <span>Experience across commercial, branded, live performance, and narrative work.</span>
+            </div>
+            <div class="trust-item">
+              <strong>200+ Projects</strong>
+              <span>Hands-on delivery across different formats, budgets, locations, and production pressures.</span>
+            </div>
+            <div class="trust-item">
+              <strong>Movement Edge</strong>
+              <span>Dance background translated into stronger blocking, choreography coverage, and camera rhythm.</span>
+            </div>
+            <div class="trust-item">
+              <strong>Ireland / International</strong>
+              <span>Dublin-based with studio and production infrastructure through Fade Street Studios and FruitFrame.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section services reveal" id="services">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">What I’m Hired For</div>
+              <h2 class="section-title">Premium Cinematic Work.<br>Built To Deliver On Set.</h2>
+            </div>
+            <p class="section-intro">I like work that looks strong, feels natural, and is well run on set. That is really the core of what I offer.</p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <h3>Commercial DOP</h3>
+              <p>For agencies, brands, and production companies that need polished cinematic work without losing efficiency, pace, or clarity on the day.</p>
+              <ul>
+                <li>Visual approach aligned to treatment, schedule, and deliverables.</li>
+                <li>Lighting and camera plans that stay practical under real production pressure.</li>
+                <li>Strong communication with directors, producers, and crew from prep through shoot.</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <h3>Movement Cinematography</h3>
+              <p>My dance background gives me an extra edge when performance, rhythm, choreography, or bodies in space are central to the brief.</p>
+              <ul>
+                <li>Cleaner blocking decisions for dance, sport, live performance, and movement-led brand films.</li>
+                <li>Camera movement designed to support timing and emotion, not distract from it.</li>
+                <li>Better instinct for when to flow, hold, reveal, or stay disciplined in the frame.</li>
+              </ul>
+            </article>
+
+            <article class="service-card">
+              <h3>Operating On Set</h3>
+              <p>Available as DOP, Steadicam operator, gimbal operator, or combined DOP/operator depending on the needs of the shoot.</p>
+              <ul>
+                <li>Certified Steadicam and experienced gimbal operation.</li>
+                <li>Reliable execution on technically demanding setups and movement-heavy scenes.</li>
+                <li>Useful when productions need both visual leadership and precise camera handling.</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -1384,9 +1658,9 @@
           <div class="section-head">
             <div>
               <div class="eyebrow">Selected Work</div>
-              <h2 class="section-title">Selected Work.<br>Commercial, Performance, Narrative.</h2>
+              <h2 class="section-title">Work That Balances<br>Style, Movement, And Control.</h2>
             </div>
-            <p class="section-intro">A mix of commercials, branded content, dance, music, theatre, short films, and narrative work. This site is a curated visual selection. For full pieces and more moving work, head to Vimeo.</p>
+            <p class="section-intro">A mix of commercials, branded work, dance, theatre, music, and narrative projects. Just a selection to give a feel for the work.</p>
           </div>
 
           <div class="work-grid">
@@ -1528,8 +1802,37 @@
           </div>
 
           <div class="work-note">
-            <p>If you want to watch full projects rather than stills and loop moments, the full portfolio is on Vimeo. This page is meant to give a quick feel for the range, the movement, and the visual style.</p>
-            <a class="ghost-btn work-link" href="https://vimeo.com/fruitframefilms" target="_blank" rel="noreferrer">View Full Work On Vimeo</a>
+            <p>For full cuts and more work, the full portfolio is on Vimeo.</p>
+            <a class="ghost-btn work-link" href="https://vimeo.com/showcase/12189648?share=copy&amp;fl=sm&amp;fe=fs" target="_blank" rel="noreferrer">View Full Work On Vimeo</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-studies reveal" id="approach">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Approach</div>
+              <h2 class="section-title">How I Ended Up<br>Shooting This Way.</h2>
+            </div>
+            <p class="section-intro">This is probably the simplest way to explain what shapes the work and how I tend to be on set.</p>
+          </div>
+
+          <div class="story-panel">
+            <div class="story-visual">
+              <img src="images/approach-bts.jpg" alt="Jacek Snochowski operating camera on set">
+            </div>
+            <div class="story-copy">
+              <p>I came into cinematography through dance, so I naturally pay a lot of attention to rhythm, timing, and how people move through space. That still affects the way I shoot now, whether it is a dance film, a commercial, or a performance-led piece.</p>
+              <p>Over time, that turned into something practical on set. I’m usually thinking about how to keep the camera expressive without making it showy, how to support performance, and how to make strong visual decisions without slowing the day down.</p>
+              <p>I work well under pressure and tend to think fast when something needs solving. Good communication, solid prep, and being able to adapt quickly matter just as much to me as the frame itself.</p>
+
+              <div class="story-points">
+                <div><strong>What that usually means:</strong> camera movement that feels motivated, not forced.</div>
+                <div><strong>On performance-led work:</strong> a better instinct for choreography, blocking, and timing.</div>
+                <div><strong>On commercial jobs:</strong> strong visuals, but with an eye on pace, clarity, and getting the work done properly.</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1541,7 +1844,7 @@
               <div class="eyebrow">About</div>
               <h2 class="section-title">Dance Came First.<br>The Camera Followed.</h2>
             </div>
-            <p class="section-intro">Dance has always been part of how I see cinematography. It shaped the way I understand rhythm, timing, bodies in space, and how movement can carry emotion without forcing it.</p>
+            <p class="section-intro">Dance shaped the way I understand rhythm, blocking, bodies in space, and how movement carries emotion on screen. That background now shows up as a production advantage, especially when performance and timing matter.</p>
           </div>
 
           <div class="about-grid">
@@ -1556,18 +1859,18 @@
             </div>
 
             <div class="about-content">
-              <p class="about-lead">I came to cinematography through dance, and that still shapes how I see movement, rhythm, and timing on screen.</p>
+              <p class="about-lead">I came to cinematography through dance, and that gives me a stronger instinct for rhythm, choreography, and camera timing on set.</p>
 
               <div class="about-body">
                 <p>I’m a Dublin-based <strong>Director of Photography, camera operator, and certified Steadicam and gimbal operator</strong> working across commercial, branded, music, theatre, performance-led, short film, and narrative projects.</p>
-                <p>My approach is built around <strong>movement, timing, and control</strong> — shaped by a background in competitive breakdancing and years of hands-on operating. That gives me a practical instinct for choreography, rhythm, and how bodies move through frame.</p>
-                <p>As both a DOP and operator, I focus on creating clean, cinematic visuals that work in real production environments. The aim is not just to design strong images, but to execute them efficiently and consistently on set.</p>
+                <p>My approach is built around <strong>movement, timing, and control</strong> shaped by a background in competitive breakdancing and years of hands-on operating. That translates into better instinct for choreography, rhythm, and how bodies move through frame.</p>
+                <p>As both a DOP and operator, I focus on creating clean, cinematic visuals that work in real production environments. The aim is not just to design strong images, but to execute them efficiently and consistently when the pressure is on.</p>
                 <p>I also co-run <a href="https://fadestreetstudios.ie" target="_blank" rel="noreferrer">Fade Street Studios</a> and <a href="https://fruitframe.ie" target="_blank" rel="noreferrer">FruitFrame</a>, giving me a solid production base and the ability to scale projects with clarity and reliability when needed.</p>
               </div>
 
               <div class="stats">
                 <div class="stat">
-                  <div class="stat-value">20+</div>
+                  <div class="stat-value">15+</div>
                   <div class="stat-label">Years in the industry</div>
                 </div>
                 <div class="stat">
@@ -1585,8 +1888,8 @@
                 <span class="tag">Steadicam Operator</span>
                 <span class="tag">Gimbal Operator</span>
                 <span class="tag">Camera Operator</span>
-                <span class="tag">Performance & Dance</span>
-                <span class="tag">Commercial & Narrative</span>
+                <span class="tag">Performance &amp; Dance</span>
+                <span class="tag">Commercial &amp; Narrative</span>
               </div>
             </div>
           </div>
@@ -1598,9 +1901,9 @@
           <div class="section-head">
             <div>
               <div class="eyebrow">Credentials</div>
-              <h2 class="section-title">Training That<br>Supports The Work.</h2>
+              <h2 class="section-title">Training That Supports<br>Reliable Execution.</h2>
             </div>
-            <p class="section-intro">I’ve been in the industry since 2005, and I still think of the work as something you keep building. Training matters, but so does staying curious, sharpening technique, and finding better ways to work on every project.</p>
+            <p class="section-intro">I’ve always liked learning properly and staying sharp. These courses helped me build the technical side of the job, but the real value is how that shows up on set.</p>
           </div>
 
           <div class="credential-list">
@@ -1648,9 +1951,9 @@
             <div class="lab-grid">
               <div class="lab-copy">
                 <div class="eyebrow">Cinematography Lab</div>
-                <h2 class="lab-title">Hands-On Sessions For Filmmakers Who Want Better Control On Set.</h2>
-                <p>Collaborative shooting sessions at Fade Street Studios where experienced filmmakers build scenes, shape light, test movement, and refine practical decision-making without client pressure.</p>
-                <p>The format is focused and efficient: real space, real equipment, small groups, and enough time to test ideas properly instead of talking around them.</p>
+                <h2 class="lab-title">A Separate Space For Filmmakers Who Want To Train Their Eye And Technique.</h2>
+                <p>Cinematography Lab is a side initiative at Fade Street Studios for experienced practitioners who want hands-on testing time away from client pressure.</p>
+                <p>It sits outside the main DOP offering, but it reflects the same focus on movement, lighting, and practical decision-making on set.</p>
                 <ul class="lab-list">
                   <li>Build a scene from a visual reference</li>
                   <li>Light with purpose and adjust in real time</li>
@@ -1661,7 +1964,7 @@
 
               <div class="lab-side">
                 <div class="info-card">
-                  <h3>Session Details</h3>
+                  <h3>For Interested Filmmakers</h3>
                   <ul class="info-list">
                     <li><strong>Duration</strong><span>3 to 4 hours</span></li>
                     <li><strong>Location</strong><span>Fade Street Studios, Dublin 2</span></li>
@@ -1670,7 +1973,7 @@
                     <li><strong>Level</strong><span>Best suited to experienced practitioners</span></li>
                   </ul>
                 </div>
-                <button class="btn" type="button" id="openLabButton">View Details & Register</button>
+                <button class="btn" type="button" id="openLabButton">View Details &amp; Register</button>
               </div>
             </div>
           </div>
@@ -1685,7 +1988,7 @@
                 <div class="eyebrow">Contact</div>
                 <h2 class="contact-title">Clean, Cinematic Work. Efficient Execution On Set.</h2>
               </div>
-              <p class="contact-text">I work with directors, producers, agencies, brands, and production companies across Ireland and internationally. If you need a DOP, camera operator, Steadicam operator, or a movement-led approach to camera and performance, send the brief.</p>
+              <p class="contact-text">If you’re looking for a DOP or operator for a commercial, branded piece, or movement-led project, feel free to get in touch. A short message with the idea, dates, and location is plenty.</p>
 
               <div class="detail-list">
                 <div class="detail-item">
@@ -1710,30 +2013,37 @@
                 </div>
                 <div class="detail-item">
                   <div class="detail-label">Vimeo</div>
-                  <div class="detail-value"><a href="https://vimeo.com/fruitframefilms" target="_blank" rel="noreferrer">vimeo.com/fruitframefilms</a></div>
+                  <div class="detail-value"><a href="https://vimeo.com/showcase/12189648?share=copy&amp;fl=sm&amp;fe=fs" target="_blank" rel="noreferrer">Vimeo Showcase</a></div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-label">Best for</div>
+                  <div class="detail-value">Agencies, production companies, brands, directors, and performance-led briefs.</div>
                 </div>
               </div>
             </div>
 
             <div class="contact-right">
-              <h3>Tell me about the project</h3>
+              <h3>Send The Brief</h3>
               <form id="contactForm">
+                <input type="hidden" name="_subject" value="Website Project Inquiry">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="text" name="_honey" style="display:none">
                 <div class="form-grid" style="padding-top:0;border-top:none;">
                   <div class="form-field">
                     <label class="form-label" for="contactName">Name</label>
-                    <input class="input" id="contactName" type="text" placeholder="Your name" required>
+                    <input class="input" id="contactName" name="name" type="text" placeholder="Your name" required>
                   </div>
                   <div class="form-field">
                     <label class="form-label" for="contactCompany">Company</label>
-                    <input class="input" id="contactCompany" type="text" placeholder="Optional">
+                    <input class="input" id="contactCompany" name="company" type="text" placeholder="Optional">
                   </div>
                   <div class="form-field full">
                     <label class="form-label" for="contactEmail">Email</label>
-                    <input class="input" id="contactEmail" type="email" placeholder="your@email.com" required>
+                    <input class="input" id="contactEmail" name="email" type="email" placeholder="your@email.com" required>
                   </div>
                   <div class="form-field full">
                     <label class="form-label" for="contactNeed">What do you need?</label>
-                    <select class="select" id="contactNeed">
+                    <select class="select" id="contactNeed" name="need">
                       <option>Director of Photography</option>
                       <option>Steadicam Operator</option>
                       <option>Camera Operator</option>
@@ -1745,15 +2055,15 @@
                   </div>
                   <div class="form-field full">
                     <label class="form-label" for="contactProject">About the project</label>
-                    <textarea class="textarea" id="contactProject" placeholder="Brief overview, timeline, location." required></textarea>
+                    <textarea class="textarea" id="contactProject" name="project" placeholder="Brief overview, dates, location, deliverables, or link to deck/treatment." required></textarea>
                   </div>
                 </div>
 
                 <div class="form-actions">
-                  <button class="btn" type="submit">Create Email Draft</button>
-                  <div class="form-note">This opens your mail app with the enquiry pre-filled.</div>
+                  <button class="btn" type="submit">Send Inquiry</button>
+                  <div class="form-note">This now sends directly to my email. I typically reply within 24 hours.</div>
                 </div>
-                <div class="success-message" id="contactSuccess">Your email draft is ready. If nothing opened, email jaceksnochowski@gmail.com directly.</div>
+                <div class="success-message" id="contactSuccess">Thanks. Your inquiry has been sent.</div>
               </form>
               <div class="contact-foot">Clear communication, efficient prep, and a typical reply window of within 24 hours.</div>
             </div>
@@ -1873,72 +2183,50 @@
     if (event.key === "Escape") closeOverlay();
   });
 
-  function openMailto({ subject, lines }) {
-    const bodyText = lines.join("\n");
-    window.location.href = `mailto:jaceksnochowski@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+  async function submitToEmail(form, successElement, sendingText, successText, errorText) {
+    successElement.textContent = sendingText;
+    successElement.classList.add("show");
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/jaceksnochowski@gmail.com", {
+        method: "POST",
+        headers: {
+          Accept: "application/json"
+        },
+        body: new FormData(form)
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      successElement.textContent = successText;
+      form.reset();
+    } catch (error) {
+      successElement.textContent = errorText;
+    }
   }
 
-  document.getElementById("labSubmit").addEventListener("click", () => {
-    const firstName = document.getElementById("labFirstName").value.trim();
-    const lastName = document.getElementById("labLastName").value.trim();
-    const email = document.getElementById("labEmail").value.trim();
-    const role = document.getElementById("labRole").value;
-    const experience = document.getElementById("labExperience").value;
-    const notes = document.getElementById("labNotes").value.trim();
-
-    if (!firstName || !lastName || !email) {
-      document.getElementById("labSuccess").textContent = "Please fill in your name and email first.";
-      document.getElementById("labSuccess").classList.add("show");
-      return;
-    }
-
-    openMailto({
-      subject: "Cinematography Lab Interest",
-      lines: [
-        `Name: ${firstName} ${lastName}`,
-        `Email: ${email}`,
-        `Role: ${role}`,
-        `Experience: ${experience}`,
-        "",
-        "Additional notes:",
-        notes || "None"
-      ]
-    });
-
-    document.getElementById("labSuccess").textContent = "Your email draft is ready. If nothing opened, email jaceksnochowski@gmail.com directly.";
-    document.getElementById("labSuccess").classList.add("show");
+  document.getElementById("labForm").addEventListener("submit", async (event) => {
+    event.preventDefault();
+    await submitToEmail(
+      event.currentTarget,
+      document.getElementById("labSuccess"),
+      "Sending your registration...",
+      "Thanks. Your registration has been sent.",
+      "Something went wrong sending this form. Please email jaceksnochowski@gmail.com directly."
+    );
   });
 
-  document.getElementById("contactForm").addEventListener("submit", (event) => {
+  document.getElementById("contactForm").addEventListener("submit", async (event) => {
     event.preventDefault();
-
-    const name = document.getElementById("contactName").value.trim();
-    const company = document.getElementById("contactCompany").value.trim();
-    const email = document.getElementById("contactEmail").value.trim();
-    const need = document.getElementById("contactNeed").value;
-    const project = document.getElementById("contactProject").value.trim();
-
-    if (!name || !email || !project) {
-      document.getElementById("contactSuccess").textContent = "Please complete your name, email, and project details first.";
-      document.getElementById("contactSuccess").classList.add("show");
-      return;
-    }
-
-    openMailto({
-      subject: `Project Enquiry${company ? ` | ${company}` : ""}`,
-      lines: [
-        `Name: ${name}`,
-        `Company: ${company || "Not provided"}`,
-        `Email: ${email}`,
-        `Role needed: ${need}`,
-        "",
-        "Project details:",
-        project
-      ]
-    });
-
-    document.getElementById("contactSuccess").textContent = "Your email draft is ready. If nothing opened, email jaceksnochowski@gmail.com directly.";
-    document.getElementById("contactSuccess").classList.add("show");
+    await submitToEmail(
+      event.currentTarget,
+      document.getElementById("contactSuccess"),
+      "Sending your inquiry...",
+      "Thanks. Your inquiry has been sent.",
+      "Something went wrong sending this form. Please email jaceksnochowski@gmail.com directly."
+    );
   });
 </script>
 </body>
