@@ -2101,6 +2101,7 @@
   const revealItems = [...document.querySelectorAll(".reveal")];
   const workCards = [...document.querySelectorAll(".work-card")];
   const autoplayVideos = [...document.querySelectorAll("video[autoplay]")];
+  const heroVideo = document.querySelector(".hero-video");
   const labOverlay = document.getElementById("labOverlay");
   const openLabButton = document.getElementById("openLabButton");
   const overlayClose = document.getElementById("overlayClose");
@@ -2158,11 +2159,25 @@
     video.setAttribute("muted", "");
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "");
-    video.load();
     tryPlay();
     video.addEventListener("loadedmetadata", tryPlay, { once: true });
     video.addEventListener("canplay", tryPlay, { once: true });
   });
+
+  if (heroVideo) {
+    const ensureHeroPlayback = () => {
+      const playAttempt = heroVideo.play();
+      if (playAttempt && typeof playAttempt.catch === "function") {
+        playAttempt.catch(() => {});
+      }
+    };
+
+    window.addEventListener("load", ensureHeroPlayback, { once: true });
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) ensureHeroPlayback();
+    });
+    document.addEventListener("touchstart", ensureHeroPlayback, { once: true, passive: true });
+  }
 
   const mobileVideoObserver = new IntersectionObserver((entries) => {
     if (!mobileVideoQuery.matches) return;
@@ -2174,7 +2189,6 @@
 
       if (entry.isIntersecting) {
         card.classList.add("has-video");
-        video.style.display = "block";
         const playAttempt = video.play();
         card.classList.add("is-playing");
         if (playAttempt && typeof playAttempt.catch === "function") {
@@ -2197,12 +2211,10 @@
 
     const disableVideo = () => {
       card.classList.remove("has-video", "is-playing");
-      video.style.display = "none";
     };
 
     video.addEventListener("loadeddata", () => {
       card.classList.add("has-video");
-      video.style.display = "block";
     });
 
     video.addEventListener("error", disableVideo);
@@ -2210,7 +2222,7 @@
 
     const playVideo = () => {
       if (mobileVideoQuery.matches) return;
-      if (!card.classList.contains("has-video")) return;
+      card.classList.add("has-video");
       const playAttempt = video.play();
       card.classList.add("is-playing");
       if (playAttempt && typeof playAttempt.catch === "function") {
@@ -2222,7 +2234,6 @@
 
     const resetVideo = () => {
       if (mobileVideoQuery.matches) return;
-      if (!card.classList.contains("has-video")) return;
       card.classList.remove("is-playing");
       video.pause();
       video.currentTime = 0;
