@@ -1,0 +1,1945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jacek Snochowski | Director of Photography, Dublin</title>
+<meta name="description" content="Jacek Snochowski is a Dublin-based Director of Photography specialising in commercials, branded content, music, theatre, performance, short films, and narrative work.">
+<meta name="keywords" content="Jacek Snochowski, cinematographer Dublin, director of photography Dublin, DOP Ireland, steadicam operator Dublin">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://jaceksnochowski.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0a;
+    --panel:#111111;
+    --panel-2:#151515;
+    --text:#f2ede5;
+    --muted:rgba(242,237,229,0.72);
+    --soft:rgba(242,237,229,0.46);
+    --faint:rgba(242,237,229,0.18);
+    --line:rgba(242,237,229,0.1);
+    --accent:#b8864c;
+    --accent-soft:rgba(184,134,76,0.18);
+    --shadow:0 24px 90px rgba(0,0,0,0.45);
+    --sidebar:290px;
+    --max:1440px;
+    --gutter:clamp(1.25rem, 2vw, 2rem);
+    --section-pad:clamp(4.5rem, 7vw, 8rem);
+    --headline:"Manrope", sans-serif;
+    --body:"Manrope", sans-serif;
+    --ease:cubic-bezier(.2,.8,.2,1);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at top left, rgba(184,134,76,0.08), transparent 32%),
+      radial-gradient(circle at bottom right, rgba(242,237,229,0.04), transparent 28%),
+      var(--bg);
+    color:var(--text);
+    font-family:var(--body);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  img,video{display:block;max-width:100%}
+  a{color:inherit}
+  button,input,select,textarea{font:inherit}
+
+  .site-shell{
+    display:grid;
+    grid-template-columns:var(--sidebar) 1fr;
+    min-height:100vh;
+  }
+
+  .sidebar{
+    position:sticky;
+    top:0;
+    height:100vh;
+    padding:2rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    border-right:1px solid var(--line);
+    background:rgba(10,10,10,0.9);
+    backdrop-filter:blur(18px);
+  }
+
+  .brand-mark{
+    display:grid;
+    gap:0.6rem;
+  }
+
+  .brand-name,
+  .hero-name,
+  .section-title,
+  .work-title,
+  .card-index,
+  .contact-title,
+  .lab-title,
+  .stat-value{
+    font-family:var(--headline);
+    text-transform:uppercase;
+    letter-spacing:0.01em;
+  }
+
+  .brand-name{
+    font-size:1.2rem;
+    line-height:0.95;
+  }
+
+  .brand-title,
+  .small-label,
+  .pill,
+  .nav-link,
+  .detail-label,
+  .footer-note,
+  .form-label,
+  .hero-kicker,
+  .work-meta,
+  .card-type{
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+  }
+
+  .brand-title,
+  .small-label,
+  .detail-label,
+  .footer-note,
+  .hero-kicker,
+  .work-meta,
+  .card-type,
+  .form-label{
+    font-size:0.72rem;
+    color:var(--soft);
+  }
+
+  .nav{
+    display:grid;
+    gap:0.5rem;
+    margin:2.25rem 0 0;
+  }
+
+  .nav-link{
+    text-decoration:none;
+    font-family:var(--headline);
+    font-size:0.92rem;
+    color:rgba(242,237,229,0.56);
+    padding:0.75rem 0;
+    border-top:1px solid transparent;
+    transition:color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
+  }
+
+  .nav-link:hover,
+  .nav-link.active{
+    color:var(--text);
+    border-color:var(--line);
+    transform:translateX(4px);
+  }
+
+  .sidebar-copy{
+    display:grid;
+    gap:1.8rem;
+  }
+
+  .role-list{
+    display:grid;
+    gap:0.8rem;
+    color:var(--soft);
+    font-size:0.96rem;
+  }
+
+  .sidebar-note{
+    display:grid;
+    gap:0.9rem;
+  }
+
+  .socials{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.9rem 1.2rem;
+    padding-top:1.25rem;
+    border-top:1px solid var(--line);
+  }
+
+  .socials a{
+    text-decoration:none;
+    color:var(--muted);
+    transition:color .2s var(--ease);
+  }
+
+  .socials a:hover{color:var(--text)}
+
+  .mobile-bar{
+    display:none;
+    position:sticky;
+    top:0;
+    z-index:50;
+    align-items:center;
+    justify-content:space-between;
+    padding:1rem 1.2rem;
+    border-bottom:1px solid var(--line);
+    background:rgba(10,10,10,0.92);
+    backdrop-filter:blur(14px);
+  }
+
+  .mobile-logo{
+    font-family:var(--headline);
+    font-size:1rem;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+  }
+
+  .menu-toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:0.7rem;
+    padding:0;
+    color:var(--text);
+    background:none;
+    border:none;
+    cursor:pointer;
+  }
+
+  .menu-toggle-lines{
+    display:grid;
+    gap:4px;
+  }
+
+  .menu-toggle-lines span{
+    width:18px;
+    height:1px;
+    background:var(--text);
+  }
+
+  .mobile-menu{
+    position:fixed;
+    inset:61px 0 auto;
+    display:none;
+    background:rgba(10,10,10,0.97);
+    border-bottom:1px solid var(--line);
+    padding:1rem 1.2rem 1.4rem;
+    z-index:49;
+  }
+
+  .mobile-menu.open{display:grid;gap:0.25rem}
+
+  .mobile-menu a{
+    text-decoration:none;
+    padding:0.95rem 0;
+    border-bottom:1px solid rgba(242,237,229,0.07);
+    font-family:var(--headline);
+    font-size:1.05rem;
+    letter-spacing:0.05em;
+    text-transform:uppercase;
+  }
+
+  .content{
+    min-width:0;
+  }
+
+  .section{
+    padding:0 var(--gutter);
+  }
+
+  .section-inner{
+    width:min(calc(100% - 0rem), var(--max));
+    margin:0 auto;
+  }
+
+  .hero{
+    min-height:100vh;
+    padding:clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .hero-stage{
+    position:relative;
+    min-height:calc(100vh - 2rem);
+    border:1px solid var(--line);
+    overflow:hidden;
+    box-shadow:var(--shadow);
+    background:#050505;
+  }
+
+  .hero-video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:1;
+  }
+
+  .hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+      linear-gradient(180deg, rgba(10,10,10,0.03) 0%, rgba(10,10,10,0.34) 62%, rgba(10,10,10,0.7) 100%),
+      linear-gradient(90deg, rgba(10,10,10,0.42) 0%, rgba(10,10,10,0.08) 55%, rgba(10,10,10,0.38) 100%);
+  }
+
+  .hero-grid{
+    position:relative;
+    z-index:1;
+    min-height:calc(100vh - 2rem);
+    display:grid;
+    grid-template-columns:minmax(0, 1.4fr) minmax(280px, 0.75fr);
+    align-items:end;
+    gap:2.5rem;
+    padding:clamp(1.5rem, 3vw, 2.5rem);
+  }
+
+  .hero-copy{
+    max-width:760px;
+    padding-top:6rem;
+  }
+
+  .hero-kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:0.8rem;
+    margin-bottom:1.2rem;
+  }
+
+  .hero-kicker::before{
+    content:"";
+    width:34px;
+    height:1px;
+    background:var(--accent);
+  }
+
+  .hero-name{
+    font-size:clamp(3.2rem, 7.8vw, 6.6rem);
+    line-height:0.88;
+    margin:0 0 1rem;
+  }
+
+  .hero-subhead{
+    max-width:36ch;
+    font-size:clamp(1.05rem, 1.8vw, 1.42rem);
+    line-height:1.55;
+    color:var(--muted);
+    margin:0 0 2rem;
+  }
+
+  .hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.9rem;
+  }
+
+  .btn,
+  .ghost-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:0.6rem;
+    min-height:48px;
+    padding:0.95rem 1.35rem;
+    text-decoration:none;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-size:0.78rem;
+    transition:transform .25s var(--ease), border-color .25s var(--ease), background-color .25s var(--ease), color .25s var(--ease);
+  }
+
+  .btn{
+    background:var(--text);
+    color:var(--bg);
+    border:1px solid var(--text);
+  }
+
+  .btn:hover{
+    transform:translateY(-2px);
+    background:#ffffff;
+  }
+
+  .ghost-btn{
+    border:1px solid rgba(242,237,229,0.26);
+    color:var(--text);
+    background:rgba(242,237,229,0.04);
+  }
+
+  .ghost-btn:hover{
+    transform:translateY(-2px);
+    border-color:rgba(242,237,229,0.54);
+    background:rgba(242,237,229,0.08);
+  }
+
+  .hero-side{
+    align-self:end;
+    display:grid;
+    gap:1rem;
+  }
+
+  .hero-card{
+    background:rgba(11,11,11,0.68);
+    border:1px solid rgba(242,237,229,0.12);
+    padding:1.1rem 1.15rem;
+    backdrop-filter:blur(12px);
+  }
+
+  .hero-card p{
+    margin:0;
+    color:var(--muted);
+    line-height:1.6;
+    font-size:0.96rem;
+  }
+
+  .hero-card strong{
+    color:var(--text);
+    font-weight:600;
+  }
+
+  .pill-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.6rem;
+  }
+
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    min-height:34px;
+    padding:0.55rem 0.8rem;
+    border:1px solid rgba(242,237,229,0.12);
+    background:rgba(242,237,229,0.03);
+    font-size:0.66rem;
+    color:var(--muted);
+  }
+
+  .hero-footer{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:1rem;
+    margin-top:1rem;
+  }
+
+  .hero-scroll{
+    color:var(--soft);
+    font-size:0.8rem;
+  }
+
+  .hero-scroll span{
+    display:block;
+    margin-top:0.4rem;
+    width:1px;
+    height:46px;
+    background:linear-gradient(180deg, rgba(242,237,229,0.45), transparent);
+  }
+
+  .section-head{
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) minmax(260px, 420px);
+    gap:1.5rem;
+    align-items:end;
+    padding-bottom:2rem;
+    margin-bottom:2rem;
+    border-bottom:1px solid var(--line);
+  }
+
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:0.75rem;
+    margin-bottom:0.95rem;
+    color:var(--accent);
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+    font-size:0.72rem;
+  }
+
+  .eyebrow::before{
+    content:"";
+    width:30px;
+    height:1px;
+    background:currentColor;
+  }
+
+  .section-title{
+    margin:0;
+    font-size:clamp(2.1rem, 4.8vw, 4.2rem);
+    line-height:0.94;
+  }
+
+  .section-intro{
+    margin:0;
+    color:var(--muted);
+    font-size:1rem;
+    line-height:1.7;
+    max-width:38ch;
+  }
+
+  .credentials .section-head{
+    align-items:start;
+  }
+
+  .credentials .section-intro{
+    max-width:44ch;
+  }
+
+  .work{
+    padding-top:var(--section-pad);
+    padding-bottom:var(--section-pad);
+  }
+
+  .work-grid{
+    display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    gap:clamp(1rem, 1.5vw, 1.4rem);
+  }
+
+  .work-note{
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) auto;
+    gap:1.25rem;
+    align-items:center;
+    margin-top:1.5rem;
+    padding-top:1.35rem;
+    border-top:1px solid var(--line);
+  }
+
+  .work-note p{
+    margin:0;
+    color:var(--muted);
+    font-size:0.98rem;
+    line-height:1.7;
+    max-width:58ch;
+  }
+
+  .work-link{
+    white-space:nowrap;
+  }
+
+  .work-card{
+    position:relative;
+    overflow:hidden;
+    min-height:420px;
+    border:1px solid var(--line);
+    background:var(--panel);
+    text-decoration:none;
+    box-shadow:var(--shadow);
+  }
+
+  .work-media{
+    position:absolute;
+    inset:0;
+  }
+
+  .work-card.large{grid-column:span 7}
+  .work-card.medium{grid-column:span 5}
+  .work-card.wide{grid-column:span 8}
+  .work-card.tall{grid-column:span 4}
+
+  .work-card img,
+  .work-video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 1.2s var(--ease), filter .6s var(--ease);
+  }
+
+  .work-video{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .35s var(--ease);
+  }
+
+  .work-card.has-video.is-playing .work-video{
+    opacity:1;
+  }
+
+  .work-card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, rgba(10,10,10,0.06) 18%, rgba(10,10,10,0.72) 100%);
+  }
+
+  .work-card:hover img,
+  .work-card.is-playing img{
+    transform:scale(1.04);
+    filter:saturate(1.05);
+  }
+
+  .work-card-copy{
+    position:absolute;
+    inset:auto 0 0;
+    z-index:1;
+    padding:1.35rem;
+    display:grid;
+    gap:0.55rem;
+  }
+
+  .card-topline{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+  }
+
+  .card-index{
+    font-size:0.88rem;
+    color:rgba(242,237,229,0.62);
+  }
+
+  .card-type{
+    color:rgba(242,237,229,0.6);
+  }
+
+  .work-title{
+    margin:0;
+    font-size:clamp(1.45rem, 2.2vw, 2.35rem);
+    line-height:1;
+  }
+
+  .work-meta{
+    color:rgba(242,237,229,0.78);
+  }
+
+  .about{
+    padding-top:0;
+    padding-bottom:var(--section-pad);
+  }
+
+  .about-grid{
+    display:grid;
+    grid-template-columns:minmax(320px, 0.9fr) minmax(0, 1.1fr);
+    gap:clamp(1.5rem, 3vw, 3rem);
+    align-items:start;
+  }
+
+  .about-visual{
+    position:sticky;
+    top:1.5rem;
+  }
+
+  .about-photo{
+    position:relative;
+    aspect-ratio:4 / 5;
+    overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+  }
+
+  .about-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .about-photo-caption{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    display:flex;
+    justify-content:space-between;
+    gap:1rem;
+    padding:1rem 1.1rem;
+    background:linear-gradient(180deg, transparent, rgba(10,10,10,0.86));
+    color:rgba(242,237,229,0.7);
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+  }
+
+  .about-content{
+    display:grid;
+    gap:2.2rem;
+  }
+
+  .about-lead{
+    max-width:18ch;
+    margin:0;
+    font-family:var(--headline);
+    font-size:clamp(1.9rem, 3.2vw, 3rem);
+    line-height:1.02;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+  }
+
+  .about-body{
+    display:grid;
+    gap:1rem;
+  }
+
+  .about-body p{
+    margin:0;
+    color:var(--muted);
+    font-size:1rem;
+    line-height:1.82;
+    max-width:62ch;
+  }
+
+  .about-body strong{
+    color:var(--text);
+    font-weight:600;
+  }
+
+  .about-body a{
+    text-decoration:none;
+    border-bottom:1px solid rgba(242,237,229,0.22);
+    transition:border-color .2s var(--ease), color .2s var(--ease);
+  }
+
+  .about-body a:hover{
+    color:#fff;
+    border-color:rgba(242,237,229,0.7);
+  }
+
+  .stats{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:1rem;
+  }
+
+  .stat{
+    padding:1.15rem;
+    border:1px solid var(--line);
+    background:linear-gradient(180deg, rgba(242,237,229,0.02), rgba(242,237,229,0.01));
+  }
+
+  .stat-value{
+    font-size:clamp(2rem, 3.2vw, 2.7rem);
+    line-height:1;
+    margin-bottom:0.45rem;
+  }
+
+  .stat-label{
+    color:var(--soft);
+    text-transform:uppercase;
+    letter-spacing:0.12em;
+    font-size:0.72rem;
+  }
+
+  .tag-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.6rem;
+  }
+
+  .tag{
+    padding:0.65rem 0.8rem;
+    border:1px solid rgba(242,237,229,0.12);
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.13em;
+    color:var(--muted);
+    background:rgba(242,237,229,0.03);
+  }
+
+  .credentials{
+    padding-top:var(--section-pad);
+    padding-bottom:var(--section-pad);
+  }
+
+  .credential-list{
+    display:grid;
+    gap:1rem;
+  }
+
+  .credential{
+    display:grid;
+    grid-template-columns:90px minmax(0, 1fr) auto;
+    gap:1.2rem;
+    align-items:start;
+    padding:1.35rem 0;
+    border-top:1px solid var(--line);
+  }
+
+  .credential:last-child{
+    border-bottom:1px solid var(--line);
+  }
+
+  .credential-year{
+    color:var(--soft);
+    font-family:var(--headline);
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    font-size:0.95rem;
+  }
+
+  .credential-main{
+    display:grid;
+    gap:0.35rem;
+  }
+
+  .credential-title{
+    margin:0;
+    font-family:var(--headline);
+    font-size:clamp(1.1rem, 1.5vw, 1.45rem);
+    line-height:1.02;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+  }
+
+  .credential-school{
+    color:var(--muted);
+    font-size:0.96rem;
+    line-height:1.65;
+  }
+
+  .badge{
+    display:inline-flex;
+    align-items:center;
+    min-height:34px;
+    padding:0.45rem 0.75rem;
+    border:1px solid rgba(184,134,76,0.34);
+    background:var(--accent-soft);
+    color:#e7c49f;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-size:0.66rem;
+    white-space:nowrap;
+  }
+
+  .lab{
+    padding-top:var(--section-pad);
+    padding-bottom:var(--section-pad);
+  }
+
+  .lab-panel{
+    position:relative;
+    overflow:hidden;
+    border:1px solid var(--line);
+    padding:clamp(1.4rem, 3vw, 2.4rem);
+    background:
+      radial-gradient(circle at top left, rgba(184,134,76,0.12), transparent 26%),
+      linear-gradient(180deg, rgba(242,237,229,0.03), rgba(242,237,229,0.01));
+    box-shadow:var(--shadow);
+  }
+
+  .lab-grid{
+    display:grid;
+    grid-template-columns:minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    gap:2rem;
+    align-items:start;
+  }
+
+  .lab-title{
+    margin:0 0 1rem;
+    font-size:clamp(2rem, 4vw, 3.5rem);
+    line-height:0.95;
+  }
+
+  .lab-copy p,
+  .lab-list li{
+    color:var(--muted);
+    font-size:1rem;
+    line-height:1.8;
+  }
+
+  .lab-copy p{margin:0 0 1rem}
+
+  .lab-list{
+    margin:1.2rem 0 0;
+    padding:0;
+    list-style:none;
+    display:grid;
+    gap:0.8rem;
+  }
+
+  .lab-list li{
+    padding-left:1rem;
+    position:relative;
+  }
+
+  .lab-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0.8rem;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:var(--accent);
+  }
+
+  .lab-side{
+    display:grid;
+    gap:1rem;
+  }
+
+  .info-card{
+    padding:1.15rem;
+    border:1px solid var(--line);
+    background:rgba(10,10,10,0.42);
+  }
+
+  .info-card h3{
+    margin:0 0 0.75rem;
+    font-family:var(--headline);
+    font-size:1.3rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+  }
+
+  .info-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:grid;
+    gap:0.85rem;
+  }
+
+  .info-list li{
+    display:grid;
+    gap:0.28rem;
+    padding-top:0.85rem;
+    border-top:1px solid rgba(242,237,229,0.07);
+  }
+
+  .info-list li:first-child{
+    border-top:none;
+    padding-top:0;
+  }
+
+  .info-list strong{
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    color:var(--soft);
+  }
+
+  .info-list span{
+    color:var(--muted);
+    line-height:1.6;
+  }
+
+  .lab-overlay{
+    position:fixed;
+    inset:0;
+    display:none;
+    z-index:80;
+    background:rgba(9,9,9,0.92);
+    backdrop-filter:blur(10px);
+    overflow:auto;
+    padding:1.4rem;
+  }
+
+  .lab-overlay.open{display:block}
+
+  .lab-dialog{
+    width:min(920px, 100%);
+    margin:0 auto;
+    border:1px solid var(--line);
+    background:var(--bg);
+    box-shadow:var(--shadow);
+  }
+
+  .lab-dialog-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:1rem;
+    padding:1.35rem 1.35rem 0;
+  }
+
+  .overlay-close{
+    border:none;
+    background:none;
+    color:var(--soft);
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+    font-size:0.72rem;
+    cursor:pointer;
+  }
+
+  .overlay-close:hover{color:var(--text)}
+
+  .lab-dialog-body{
+    padding:0 1.35rem 1.35rem;
+  }
+
+  .overlay-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:1.5rem;
+    margin:1.5rem 0 2rem;
+  }
+
+  .overlay-grid p{
+    margin:0 0 0.9rem;
+    color:var(--muted);
+    line-height:1.75;
+  }
+
+  .overlay-title{
+    margin:0;
+    font-family:var(--headline);
+    font-size:clamp(1.9rem, 4vw, 3.4rem);
+    line-height:0.95;
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+  }
+
+  .form-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:1rem 1.25rem;
+    padding-top:1.6rem;
+    border-top:1px solid var(--line);
+  }
+
+  .form-field.full{grid-column:1 / -1}
+
+  .form-label{
+    display:block;
+    margin-bottom:0.6rem;
+  }
+
+  .input,
+  .textarea,
+  .select{
+    width:100%;
+    border:1px solid rgba(242,237,229,0.14);
+    background:rgba(242,237,229,0.02);
+    color:var(--text);
+    padding:0.95rem 1rem;
+    min-height:52px;
+    transition:border-color .2s var(--ease), background-color .2s var(--ease);
+  }
+
+  .textarea{
+    min-height:140px;
+    resize:vertical;
+  }
+
+  .input:focus,
+  .textarea:focus,
+  .select:focus{
+    outline:none;
+    border-color:rgba(242,237,229,0.38);
+    background:rgba(242,237,229,0.04);
+  }
+
+  .form-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.9rem;
+    align-items:center;
+    margin-top:1.5rem;
+  }
+
+  .form-note,
+  .success-message{
+    color:var(--soft);
+    font-size:0.86rem;
+    line-height:1.6;
+  }
+
+  .success-message{
+    display:none;
+    margin-top:1rem;
+  }
+
+  .success-message.show{display:block}
+
+  .contact{
+    padding-top:var(--section-pad);
+    padding-bottom:var(--section-pad);
+  }
+
+  .contact-panel{
+    display:grid;
+    grid-template-columns:minmax(300px, 0.92fr) minmax(0, 1.08fr);
+    gap:0;
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    background:linear-gradient(180deg, rgba(242,237,229,0.02), rgba(242,237,229,0.01));
+  }
+
+  .contact-left,
+  .contact-right{
+    padding:clamp(1.35rem, 3vw, 2.2rem);
+  }
+
+  .contact-left{
+    border-right:1px solid var(--line);
+    display:grid;
+    gap:2rem;
+    align-content:start;
+  }
+
+  .contact-title{
+    margin:0;
+    font-size:clamp(2.1rem, 4.2vw, 3.8rem);
+    line-height:0.94;
+  }
+
+  .contact-text{
+    margin:0;
+    color:var(--muted);
+    font-size:1rem;
+    line-height:1.78;
+    max-width:40ch;
+  }
+
+  .detail-list{
+    display:grid;
+    gap:1rem;
+  }
+
+  .detail-item{
+    padding-top:1rem;
+    border-top:1px solid rgba(242,237,229,0.08);
+  }
+
+  .detail-value{
+    margin-top:0.35rem;
+    color:var(--text);
+    line-height:1.7;
+  }
+
+  .detail-value a{
+    text-decoration:none;
+    color:var(--muted);
+  }
+
+  .detail-value a:hover{color:var(--text)}
+
+  .contact-right h3{
+    margin:0 0 1.5rem;
+    font-family:var(--headline);
+    text-transform:uppercase;
+    letter-spacing:0.04em;
+    font-size:clamp(1.3rem, 2vw, 1.8rem);
+    line-height:1.02;
+  }
+
+  .contact-foot{
+    margin-top:1rem;
+    color:var(--soft);
+    font-size:0.86rem;
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity .7s var(--ease), transform .7s var(--ease);
+  }
+
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  @media (max-width: 1150px){
+    .site-shell{grid-template-columns:1fr}
+    .sidebar{display:none}
+    .mobile-bar{display:flex}
+    .hero{min-height:auto;padding:0}
+    .hero-stage{min-height:88svh;border-left:none;border-right:none}
+    .hero-grid{
+      min-height:88svh;
+      grid-template-columns:1fr;
+      align-content:end;
+    }
+    .hero-copy{padding-top:5rem}
+    .hero-side{max-width:520px}
+    .section-head,
+    .lab-grid,
+    .contact-panel,
+    .about-grid{
+      grid-template-columns:1fr;
+    }
+    .contact-left{border-right:none;border-bottom:1px solid var(--line)}
+    .about-visual{position:relative;top:auto}
+  }
+
+  @media (max-width: 900px){
+    .work-grid{grid-template-columns:repeat(2, 1fr)}
+    .work-note{grid-template-columns:1fr}
+    .work-card,
+    .work-card.large,
+    .work-card.medium,
+    .work-card.wide,
+    .work-card.tall{
+      grid-column:span 1;
+      min-height:320px;
+    }
+    .stats{grid-template-columns:1fr}
+    .credential{
+      grid-template-columns:1fr;
+      gap:0.8rem;
+    }
+    .overlay-grid,
+    .form-grid{
+      grid-template-columns:1fr;
+    }
+    .form-field.full{grid-column:auto}
+  }
+
+  @media (max-width: 640px){
+    .hero-stage{min-height:92svh}
+    .hero-grid{min-height:92svh;padding:1.15rem}
+    .hero-name{font-size:clamp(3rem, 16vw, 5rem)}
+    .hero-subhead{font-size:1rem}
+    .hero-actions{flex-direction:column;align-items:stretch}
+    .hero-footer{align-items:flex-start;flex-direction:column}
+    .section{padding:0 1rem}
+    .section-head{padding-bottom:1.4rem;margin-bottom:1.4rem}
+    .work-grid{grid-template-columns:1fr}
+    .work-card{min-height:360px}
+    .contact-left,
+    .contact-right,
+    .lab-dialog-body,
+    .lab-dialog-header{padding-left:1rem;padding-right:1rem}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal,
+    .work-card img,
+    .btn,
+    .ghost-btn,
+    .nav-link{
+      transition:none;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="mobile-bar">
+    <div class="mobile-logo">Jacek Snochowski</div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu" id="menuToggle">
+      <span>Menu</span>
+      <span class="menu-toggle-lines" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+  </div>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="#home">Home</a>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#lab">Cine Lab</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="lab-overlay" id="labOverlay" aria-hidden="true">
+    <div class="lab-dialog">
+      <div class="lab-dialog-header">
+        <div>
+          <div class="eyebrow">Cinematography Lab</div>
+          <h2 class="overlay-title">Hands-On<br>Shooting Sessions</h2>
+        </div>
+        <button class="overlay-close" type="button" id="overlayClose">Close</button>
+      </div>
+      <div class="lab-dialog-body">
+        <div class="overlay-grid">
+          <div>
+            <p>Most of us do our safest work when a client is watching. That is normal, but it also means you do not always get the space to try things, get them wrong, and learn from them.</p>
+            <p><strong>Cinematography Lab is a focused space to test ideas properly</strong> with experienced practitioners, practical setups, and time to iterate with intention.</p>
+          </div>
+          <div>
+            <p>We build a scene from a visual reference, shape light, test movement, work with talent when available, then shoot, review, and refine.</p>
+            <p>It is for cinematographers, operators, and filmmakers who want to spend more time making, testing, and learning on set.</p>
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label class="form-label" for="labFirstName">First Name</label>
+            <input class="input" id="labFirstName" type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="labLastName">Last Name</label>
+            <input class="input" id="labLastName" type="text" placeholder="Your surname" required>
+          </div>
+          <div class="form-field full">
+            <label class="form-label" for="labEmail">Email</label>
+            <input class="input" id="labEmail" type="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="labRole">Your Role</label>
+            <select class="select" id="labRole">
+              <option>Cinematographer / DOP</option>
+              <option>Camera Operator</option>
+              <option>1st AC / Focus Puller</option>
+              <option>Gaffer / Lighting Tech</option>
+              <option>Director</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="labExperience">Experience</label>
+            <select class="select" id="labExperience">
+              <option>1–2 years</option>
+              <option>3–5 years</option>
+              <option>5–10 years</option>
+              <option>10+ years</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label class="form-label" for="labNotes">Anything To Add?</label>
+            <textarea class="textarea" id="labNotes" placeholder="Optional"></textarea>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="button" id="labSubmit">Register Interest</button>
+          <div class="form-note">This opens a pre-filled email so you can send your interest directly.</div>
+        </div>
+        <div class="success-message" id="labSuccess">Your email draft is ready. If nothing opened, email jaceksnochowski@gmail.com directly.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div>
+        <div class="brand-mark">
+          <div class="brand-name">Jacek<br>Snochowski</div>
+          <div class="brand-title">Director of Photography<br>Dublin, Ireland</div>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link" href="#work">Work</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#credentials">Credentials</a>
+          <a class="nav-link" href="#lab">Cine Lab</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="sidebar-copy">
+        <div class="role-list">
+          <div>Commercials</div>
+          <div>Branded Content</div>
+          <div>Music & Theatre</div>
+          <div>Performance & Narrative</div>
+          <div>Steadicam & Movement</div>
+        </div>
+
+        <div class="sidebar-note">
+          <div class="footer-note">In the industry since 2005. Still learning, still growing. Based in Dublin, co-running Fade Street Studios and FruitFrame, and working across Ireland and internationally.</div>
+          <div class="socials">
+            <a href="mailto:jaceksnochowski@gmail.com">Email</a>
+            <a href="https://www.instagram.com/jacekfruitframe/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://vimeo.com/fruitframefilms" target="_blank" rel="noreferrer">Vimeo</a>
+            <a href="https://www.linkedin.com/in/jacek-snochowski-735652273" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="hero reveal" id="home">
+        <div class="hero-stage">
+          <video class="hero-video" autoplay muted loop playsinline poster="images/work-1.png">
+            <source src="videos/reel-loop.mp4" type="video/mp4">
+          </video>
+          <div class="hero-overlay"></div>
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="hero-kicker">Director of Photography | Dublin / International</div>
+              <h1 class="hero-name">Jacek<br>Snochowski</h1>
+              <p class="hero-subhead">I’m a Dublin-based Director of Photography, Steadicam operator, and gimbal operator, working across commercials, branded content, music, theatre, performance-led projects, short films, and narrative work. Movement has always been a big part of how I see the frame.</p>
+              <div class="hero-actions">
+                <a class="btn" href="#work">View Selected Work</a>
+                <a class="ghost-btn" href="#contact">Start A Conversation</a>
+              </div>
+            </div>
+
+            <div class="hero-side">
+              <div class="hero-card">
+                <div class="small-label">What I Do</div>
+                <p>I work as a Director of Photography and operator across commercials, branded content, music, theatre, performance, short films, and narrative projects, with a strong focus on movement and how images feel on set.</p>
+              </div>
+              <div class="hero-card">
+                <div class="small-label">Focused Areas</div>
+                <div class="pill-row">
+                  <span class="pill">Commercials</span>
+                  <span class="pill">Branded</span>
+                  <span class="pill">Music</span>
+                  <span class="pill">Theatre</span>
+                  <span class="pill">Narrative</span>
+                  <span class="pill">Performance</span>
+                  <span class="pill">Dance</span>
+                  <span class="pill">Short Films</span>
+                </div>
+              </div>
+              <div class="hero-footer">
+                <div class="footer-note">Based in Dublin. Working across Ireland and internationally with a movement-first approach to camera and blocking.</div>
+                <div class="hero-scroll">Scroll<span aria-hidden="true"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section work reveal" id="work">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Selected Work</div>
+              <h2 class="section-title">Selected Work.<br>Commercial, Performance, Narrative.</h2>
+            </div>
+            <p class="section-intro">A mix of commercials, branded content, dance, music, theatre, short films, and narrative work. This site is a curated visual selection. For full pieces and more moving work, head to Vimeo.</p>
+          </div>
+
+          <div class="work-grid">
+            <article class="work-card large">
+              <div class="work-media">
+                <img src="images/work-1.png" alt="2024 reel">
+                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                  <source src="videos/reel-loop.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="work-card-copy">
+                <div class="card-topline">
+                  <span class="card-index">01</span>
+                  <span class="card-type">Showreel</span>
+                </div>
+                <h3 class="work-title">2025 REEL</h3>
+                <div class="work-meta">Movement Cinematography</div>
+              </div>
+            </article>
+
+            <article class="work-card medium">
+              <div class="work-media">
+                <img src="images/work-2.png" alt="Dance performance project">
+                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                  <source src="videos/work-2-loop.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="work-card-copy">
+                <div class="card-topline">
+                  <span class="card-index">02</span>
+                  <span class="card-type">DOP &amp; Cam Op</span>
+                </div>
+                <h3 class="work-title">Narrative Dance Film</h3>
+                <div class="work-meta">'Part III' Alex O'Neill &amp; James Greenan</div>
+              </div>
+            </article>
+
+            <article class="work-card medium">
+              <div class="work-media">
+                <img src="images/work-3-new.png" alt="Multicam Taaffe College project">
+                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                  <source src="videos/work-3-loop.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="work-card-copy">
+                <div class="card-topline">
+                  <span class="card-index">03</span>
+                  <span class="card-type">Live Director</span>
+                </div>
+                <h3 class="work-title">MULTICAM</h3>
+                <div class="work-meta">Taaffe College</div>
+              </div>
+            </article>
+
+            <article class="work-card large">
+              <div class="work-media">
+                <img src="images/work-4-new.png" alt="Theatre production project">
+                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                  <source src="videos/work-4-loop.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="work-card-copy">
+                <div class="card-topline">
+                  <span class="card-index">04</span>
+                  <span class="card-type">DOP &amp; Cam Op</span>
+                </div>
+                <h3 class="work-title">THEATRE PRODUCTION</h3>
+                <div class="work-meta">'Monsters' Matt Szczerek &amp; Alessio Motta</div>
+              </div>
+            </article>
+
+            <article class="work-card wide">
+              <div class="work-media">
+                <img src="images/work-5.png" alt="Feature film project">
+                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                  <source src="videos/work-5-loop.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="work-card-copy">
+                <div class="card-topline">
+                  <span class="card-index">05</span>
+                  <span class="card-type">DOP &amp; Cam Op</span>
+                </div>
+                <h3 class="work-title">SHORT FILM</h3>
+                <div class="work-meta">'Live Your Life' Akewi</div>
+              </div>
+            </article>
+
+            <article class="work-card tall">
+              <div class="work-media">
+                <img src="images/work-6.png" alt="Music video project">
+                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                  <source src="videos/work-6-loop.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="work-card-copy">
+                <div class="card-topline">
+                  <span class="card-index">06</span>
+                  <span class="card-type">Steadicam Operator</span>
+                </div>
+                <h3 class="work-title">MUSIC VIDEO</h3>
+                <div class="work-meta">'Fruta Prohibida' Qbanaa</div>
+              </div>
+            </article>
+
+            <article class="work-card tall">
+              <div class="work-media">
+                <img src="images/work-7.png" alt="Branded commercial project">
+                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                  <source src="videos/work-7-loop.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="work-card-copy">
+                <div class="card-topline">
+                  <span class="card-index">07</span>
+                  <span class="card-type">Commercial</span>
+                </div>
+                <h3 class="work-title">COMMERCIAL</h3>
+                <div class="work-meta">Red Bull 360</div>
+              </div>
+            </article>
+
+            <article class="work-card wide">
+              <div class="work-media">
+                <img src="images/work-8.png" alt="Dance film project">
+                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                  <source src="videos/work-8-loop.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="work-card-copy">
+                <div class="card-topline">
+                  <span class="card-index">08</span>
+                  <span class="card-type">DOP &amp; Cam Op</span>
+                </div>
+                <h3 class="work-title">DANCE FILM</h3>
+                <div class="work-meta">'Ready For This' WTA</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="work-note">
+            <p>If you want to watch full projects rather than stills and loop moments, the full portfolio is on Vimeo. This page is meant to give a quick feel for the range, the movement, and the visual style.</p>
+            <a class="ghost-btn work-link" href="https://vimeo.com/fruitframefilms" target="_blank" rel="noreferrer">View Full Work On Vimeo</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about reveal" id="about">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">About</div>
+              <h2 class="section-title">Dance Came First.<br>The Camera Followed.</h2>
+            </div>
+            <p class="section-intro">Dance has always been part of how I see cinematography. It shaped the way I understand rhythm, timing, bodies in space, and how movement can carry emotion without forcing it.</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-visual">
+              <figure class="about-photo">
+                <img src="images/about.png" alt="Jacek Snochowski portrait">
+                <figcaption class="about-photo-caption">
+                  <span>Jacek Snochowski</span>
+                  <span>Dublin, Ireland</span>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="about-content">
+              <p class="about-lead">I came to cinematography through dance, and that still shapes how I see movement, rhythm, and timing on screen.</p>
+
+              <div class="about-body">
+                <p>I’m a Dublin-based <strong>Director of Photography, camera operator, and certified Steadicam and gimbal operator</strong> working across commercial, branded, music, theatre, performance-led, short film, and narrative projects.</p>
+                <p>My approach is built around <strong>movement, timing, and control</strong> — shaped by a background in competitive breakdancing and years of hands-on operating. That gives me a practical instinct for choreography, rhythm, and how bodies move through frame.</p>
+                <p>As both a DOP and operator, I focus on creating clean, cinematic visuals that work in real production environments. The aim is not just to design strong images, but to execute them efficiently and consistently on set.</p>
+                <p>I also co-run <a href="https://fadestreetstudios.ie" target="_blank" rel="noreferrer">Fade Street Studios</a> and <a href="https://fruitframe.ie" target="_blank" rel="noreferrer">FruitFrame</a>, giving me a solid production base and the ability to scale projects with clarity and reliability when needed.</p>
+              </div>
+
+              <div class="stats">
+                <div class="stat">
+                  <div class="stat-value">20+</div>
+                  <div class="stat-label">Years in the industry</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-value">200+</div>
+                  <div class="stat-label">Projects delivered</div>
+                </div>
+                <div class="stat">
+                  <div class="stat-value">IE/EU</div>
+                  <div class="stat-label">Ireland and international</div>
+                </div>
+              </div>
+
+              <div class="tag-list">
+                <span class="tag">Director of Photography</span>
+                <span class="tag">Steadicam Operator</span>
+                <span class="tag">Gimbal Operator</span>
+                <span class="tag">Camera Operator</span>
+                <span class="tag">Performance & Dance</span>
+                <span class="tag">Commercial & Narrative</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section credentials reveal" id="credentials">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Credentials</div>
+              <h2 class="section-title">Training That<br>Supports The Work.</h2>
+            </div>
+            <p class="section-intro">I’ve been in the industry since 2005, and I still think of the work as something you keep building. Training matters, but so does staying curious, sharpening technique, and finding better ways to work on every project.</p>
+          </div>
+
+          <div class="credential-list">
+            <article class="credential">
+              <div class="credential-year">2014</div>
+              <div class="credential-main">
+                <h3 class="credential-title">After Effects</h3>
+                <div class="credential-school">Pulse College, Dublin, Ireland</div>
+              </div>
+            </article>
+
+            <article class="credential">
+              <div class="credential-year">2024</div>
+              <div class="credential-main">
+                <h3 class="credential-title">Steadicam Gold</h3>
+                <div class="credential-school">Ateliê Bucareste, São Paulo, Brazil</div>
+              </div>
+              <div class="badge">Certified</div>
+            </article>
+
+            <article class="credential">
+              <div class="credential-year">2025</div>
+              <div class="credential-main">
+                <h3 class="credential-title">Lighting for Film</h3>
+                <div class="credential-school">Ateliê Bucareste, São Paulo, Brazil</div>
+              </div>
+              <div class="badge">Certified</div>
+            </article>
+
+            <article class="credential">
+              <div class="credential-year">2026</div>
+              <div class="credential-main">
+                <h3 class="credential-title">Director of Photography</h3>
+                <div class="credential-school">Ateliê Bucareste, São Paulo, Brazil</div>
+              </div>
+              <div class="badge">Certified</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section lab reveal" id="lab">
+        <div class="section-inner">
+          <div class="lab-panel">
+            <div class="lab-grid">
+              <div class="lab-copy">
+                <div class="eyebrow">Cinematography Lab</div>
+                <h2 class="lab-title">Hands-On Sessions For Filmmakers Who Want Better Control On Set.</h2>
+                <p>Collaborative shooting sessions at Fade Street Studios where experienced filmmakers build scenes, shape light, test movement, and refine practical decision-making without client pressure.</p>
+                <p>The format is focused and efficient: real space, real equipment, small groups, and enough time to test ideas properly instead of talking around them.</p>
+                <ul class="lab-list">
+                  <li>Build a scene from a visual reference</li>
+                  <li>Light with purpose and adjust in real time</li>
+                  <li>Test movement, camera setup, and coverage</li>
+                  <li>Review footage, refine, and shoot again</li>
+                </ul>
+              </div>
+
+              <div class="lab-side">
+                <div class="info-card">
+                  <h3>Session Details</h3>
+                  <ul class="info-list">
+                    <li><strong>Duration</strong><span>3 to 4 hours</span></li>
+                    <li><strong>Location</strong><span>Fade Street Studios, Dublin 2</span></li>
+                    <li><strong>Gear</strong><span>Studio space and lighting included</span></li>
+                    <li><strong>Format</strong><span>Small group, rotating roles, practical focus</span></li>
+                    <li><strong>Level</strong><span>Best suited to experienced practitioners</span></li>
+                  </ul>
+                </div>
+                <button class="btn" type="button" id="openLabButton">View Details & Register</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact reveal" id="contact">
+        <div class="section-inner">
+          <div class="contact-panel">
+            <div class="contact-left">
+              <div>
+                <div class="eyebrow">Contact</div>
+                <h2 class="contact-title">Clean, Cinematic Work. Efficient Execution On Set.</h2>
+              </div>
+              <p class="contact-text">I work with directors, producers, agencies, brands, and production companies across Ireland and internationally. If you need a DOP, camera operator, Steadicam operator, or a movement-led approach to camera and performance, send the brief.</p>
+
+              <div class="detail-list">
+                <div class="detail-item">
+                  <div class="detail-label">Email</div>
+                  <div class="detail-value"><a href="mailto:jaceksnochowski@gmail.com">jaceksnochowski@gmail.com</a></div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-label">Location</div>
+                  <div class="detail-value">Dublin, Ireland</div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-label">Studio</div>
+                  <div class="detail-value"><a href="https://fadestreetstudios.ie" target="_blank" rel="noreferrer">Fade Street Studios</a></div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-label">Company</div>
+                  <div class="detail-value"><a href="https://fruitframe.ie" target="_blank" rel="noreferrer">FruitFrame</a></div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-label">Instagram</div>
+                  <div class="detail-value"><a href="https://www.instagram.com/jacekfruitframe/" target="_blank" rel="noreferrer">@jacekfruitframe</a></div>
+                </div>
+                <div class="detail-item">
+                  <div class="detail-label">Vimeo</div>
+                  <div class="detail-value"><a href="https://vimeo.com/fruitframefilms" target="_blank" rel="noreferrer">vimeo.com/fruitframefilms</a></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-right">
+              <h3>Tell me about the project</h3>
+              <form id="contactForm">
+                <div class="form-grid" style="padding-top:0;border-top:none;">
+                  <div class="form-field">
+                    <label class="form-label" for="contactName">Name</label>
+                    <input class="input" id="contactName" type="text" placeholder="Your name" required>
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" for="contactCompany">Company</label>
+                    <input class="input" id="contactCompany" type="text" placeholder="Optional">
+                  </div>
+                  <div class="form-field full">
+                    <label class="form-label" for="contactEmail">Email</label>
+                    <input class="input" id="contactEmail" type="email" placeholder="your@email.com" required>
+                  </div>
+                  <div class="form-field full">
+                    <label class="form-label" for="contactNeed">What do you need?</label>
+                    <select class="select" id="contactNeed">
+                      <option>Director of Photography</option>
+                      <option>Steadicam Operator</option>
+                      <option>Camera Operator</option>
+                      <option>Gimbal Operator</option>
+                      <option>DOP + Camera Op</option>
+                      <option>Dance / Performance Cinematography</option>
+                      <option>Not sure yet — let’s talk</option>
+                    </select>
+                  </div>
+                  <div class="form-field full">
+                    <label class="form-label" for="contactProject">About the project</label>
+                    <textarea class="textarea" id="contactProject" placeholder="Brief overview, timeline, location." required></textarea>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button class="btn" type="submit">Create Email Draft</button>
+                  <div class="form-note">This opens your mail app with the enquiry pre-filled.</div>
+                </div>
+                <div class="success-message" id="contactSuccess">Your email draft is ready. If nothing opened, email jaceksnochowski@gmail.com directly.</div>
+              </form>
+              <div class="contact-foot">Clear communication, efficient prep, and a typical reply window of within 24 hours.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+<script>
+  const body = document.body;
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = [...document.querySelectorAll(".nav-link")];
+  const mobileLinks = [...document.querySelectorAll(".mobile-menu a")];
+  const sections = [...document.querySelectorAll("main section[id]")];
+  const revealItems = [...document.querySelectorAll(".reveal")];
+  const workCards = [...document.querySelectorAll(".work-card")];
+  const labOverlay = document.getElementById("labOverlay");
+  const openLabButton = document.getElementById("openLabButton");
+  const overlayClose = document.getElementById("overlayClose");
+
+  function setMenuState(isOpen) {
+    mobileMenu.classList.toggle("open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  }
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    setMenuState(!isOpen);
+  });
+
+  mobileLinks.forEach((link) => {
+    link.addEventListener("click", () => setMenuState(false));
+  });
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const activeId = entry.target.id;
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === `#${activeId}`);
+      });
+    });
+  }, { rootMargin: "-35% 0px -45% 0px", threshold: 0.05 });
+
+  sections.forEach((section) => sectionObserver.observe(section));
+
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.14 });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  workCards.forEach((card) => {
+    const video = card.querySelector("[data-video]");
+    if (!video) return;
+
+    const disableVideo = () => {
+      card.classList.remove("has-video", "is-playing");
+      video.style.display = "none";
+    };
+
+    video.addEventListener("loadeddata", () => {
+      card.classList.add("has-video");
+      video.style.display = "block";
+    });
+
+    video.addEventListener("error", disableVideo);
+
+    const playVideo = () => {
+      if (!card.classList.contains("has-video")) return;
+      const playAttempt = video.play();
+      card.classList.add("is-playing");
+      if (playAttempt && typeof playAttempt.catch === "function") {
+        playAttempt.catch(() => {
+          card.classList.remove("is-playing");
+        });
+      }
+    };
+
+    const resetVideo = () => {
+      if (!card.classList.contains("has-video")) return;
+      card.classList.remove("is-playing");
+      video.pause();
+      video.currentTime = 0;
+    };
+
+    card.addEventListener("mouseenter", playVideo);
+    card.addEventListener("mouseleave", resetVideo);
+    card.addEventListener("focusin", playVideo);
+    card.addEventListener("focusout", resetVideo);
+  });
+
+  function openOverlay() {
+    labOverlay.classList.add("open");
+    labOverlay.setAttribute("aria-hidden", "false");
+    body.style.overflow = "hidden";
+  }
+
+  function closeOverlay() {
+    labOverlay.classList.remove("open");
+    labOverlay.setAttribute("aria-hidden", "true");
+    body.style.overflow = "";
+  }
+
+  openLabButton.addEventListener("click", openOverlay);
+  overlayClose.addEventListener("click", closeOverlay);
+  labOverlay.addEventListener("click", (event) => {
+    if (event.target === labOverlay) closeOverlay();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeOverlay();
+  });
+
+  function openMailto({ subject, lines }) {
+    const bodyText = lines.join("\n");
+    window.location.href = `mailto:jaceksnochowski@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyText)}`;
+  }
+
+  document.getElementById("labSubmit").addEventListener("click", () => {
+    const firstName = document.getElementById("labFirstName").value.trim();
+    const lastName = document.getElementById("labLastName").value.trim();
+    const email = document.getElementById("labEmail").value.trim();
+    const role = document.getElementById("labRole").value;
+    const experience = document.getElementById("labExperience").value;
+    const notes = document.getElementById("labNotes").value.trim();
+
+    if (!firstName || !lastName || !email) {
+      document.getElementById("labSuccess").textContent = "Please fill in your name and email first.";
+      document.getElementById("labSuccess").classList.add("show");
+      return;
+    }
+
+    openMailto({
+      subject: "Cinematography Lab Interest",
+      lines: [
+        `Name: ${firstName} ${lastName}`,
+        `Email: ${email}`,
+        `Role: ${role}`,
+        `Experience: ${experience}`,
+        "",
+        "Additional notes:",
+        notes || "None"
+      ]
+    });
+
+    document.getElementById("labSuccess").textContent = "Your email draft is ready. If nothing opened, email jaceksnochowski@gmail.com directly.";
+    document.getElementById("labSuccess").classList.add("show");
+  });
+
+  document.getElementById("contactForm").addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const name = document.getElementById("contactName").value.trim();
+    const company = document.getElementById("contactCompany").value.trim();
+    const email = document.getElementById("contactEmail").value.trim();
+    const need = document.getElementById("contactNeed").value;
+    const project = document.getElementById("contactProject").value.trim();
+
+    if (!name || !email || !project) {
+      document.getElementById("contactSuccess").textContent = "Please complete your name, email, and project details first.";
+      document.getElementById("contactSuccess").classList.add("show");
+      return;
+    }
+
+    openMailto({
+      subject: `Project Enquiry${company ? ` | ${company}` : ""}`,
+      lines: [
+        `Name: ${name}`,
+        `Company: ${company || "Not provided"}`,
+        `Email: ${email}`,
+        `Role needed: ${need}`,
+        "",
+        "Project details:",
+        project
+      ]
+    });
+
+    document.getElementById("contactSuccess").textContent = "Your email draft is ready. If nothing opened, email jaceksnochowski@gmail.com directly.";
+    document.getElementById("contactSuccess").classList.add("show");
+  });
+</script>
+</body>
+</html>
