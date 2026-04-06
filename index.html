@@ -37,6 +37,7 @@
   html{scroll-behavior:smooth}
   body{
     margin:0;
+    overflow-x:hidden;
     background:
       radial-gradient(circle at top left, rgba(184,134,76,0.08), transparent 32%),
       radial-gradient(circle at bottom right, rgba(242,237,229,0.04), transparent 28%),
@@ -296,6 +297,7 @@
 
   .hero-copy{
     max-width:760px;
+    min-width:0;
     padding-top:6rem;
   }
 
@@ -374,6 +376,7 @@
   .hero-side{
     align-self:end;
     display:grid;
+    min-width:0;
     gap:1rem;
   }
 
@@ -1384,11 +1387,26 @@
   @media (max-width: 640px){
     .hero-stage{min-height:92svh}
     .hero-grid{min-height:92svh;padding:1.15rem}
-    .hero-name{font-size:clamp(3rem, 16vw, 5rem)}
+    .hero-name{
+      max-width:100%;
+      font-size:clamp(2.35rem, 13vw, 4.2rem);
+      line-height:0.9;
+      overflow-wrap:anywhere;
+    }
     .hero-subhead{font-size:1rem}
     .hero-actions{flex-direction:column;align-items:stretch}
     .hero-footer{align-items:flex-start;flex-direction:column}
     .section{padding:0 1rem}
+    .content,
+    .section,
+    .section-inner,
+    .hero-stage,
+    .hero-grid,
+    .hero-copy,
+    .hero-side{
+      max-width:100%;
+      min-width:0;
+    }
     .section-head{padding-bottom:1.4rem;margin-bottom:1.4rem}
     .work-grid{grid-template-columns:1fr}
     .work-card{min-height:360px}
@@ -1667,7 +1685,7 @@
             <article class="work-card large">
               <div class="work-media">
                 <img src="images/work-1.png" alt="2024 reel">
-                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
                   <source src="videos/reel-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1684,7 +1702,7 @@
             <article class="work-card medium">
               <div class="work-media">
                 <img src="images/work-2.png" alt="Dance performance project">
-                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
                   <source src="videos/work-2-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1701,7 +1719,7 @@
             <article class="work-card medium">
               <div class="work-media">
                 <img src="images/work-3-new.png" alt="Multicam Taaffe College project">
-                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
                   <source src="videos/work-3-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1718,7 +1736,7 @@
             <article class="work-card large">
               <div class="work-media">
                 <img src="images/work-4-new.png" alt="Theatre production project">
-                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
                   <source src="videos/work-4-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1735,7 +1753,7 @@
             <article class="work-card wide">
               <div class="work-media">
                 <img src="images/work-5.png" alt="Feature film project">
-                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
                   <source src="videos/work-5-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1752,7 +1770,7 @@
             <article class="work-card tall">
               <div class="work-media">
                 <img src="images/work-6.png" alt="Music video project">
-                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
                   <source src="videos/work-6-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1769,7 +1787,7 @@
             <article class="work-card tall">
               <div class="work-media">
                 <img src="images/work-7.png" alt="Branded commercial project">
-                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
                   <source src="videos/work-7-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -1786,7 +1804,7 @@
             <article class="work-card wide">
               <div class="work-media">
                 <img src="images/work-8.png" alt="Dance film project">
-                <video class="work-video" muted loop playsinline preload="metadata" data-video>
+                <video class="work-video" autoplay muted loop playsinline preload="metadata" data-video>
                   <source src="videos/work-8-loop.mp4" type="video/mp4">
                 </video>
               </div>
@@ -2082,9 +2100,11 @@
   const sections = [...document.querySelectorAll("main section[id]")];
   const revealItems = [...document.querySelectorAll(".reveal")];
   const workCards = [...document.querySelectorAll(".work-card")];
+  const autoplayVideos = [...document.querySelectorAll("video[autoplay]")];
   const labOverlay = document.getElementById("labOverlay");
   const openLabButton = document.getElementById("openLabButton");
   const overlayClose = document.getElementById("overlayClose");
+  const mobileVideoQuery = window.matchMedia("(hover: none), (pointer: coarse), (max-width: 900px)");
 
   function setMenuState(isOpen) {
     mobileMenu.classList.toggle("open", isOpen);
@@ -2122,6 +2142,46 @@
 
   revealItems.forEach((item) => revealObserver.observe(item));
 
+  autoplayVideos.forEach((video) => {
+    const tryPlay = () => {
+      const playAttempt = video.play();
+      if (playAttempt && typeof playAttempt.catch === "function") {
+        playAttempt.catch(() => {});
+      }
+    };
+
+    video.muted = true;
+    video.setAttribute("muted", "");
+    video.setAttribute("playsinline", "");
+    tryPlay();
+    video.addEventListener("loadedmetadata", tryPlay, { once: true });
+  });
+
+  const mobileVideoObserver = new IntersectionObserver((entries) => {
+    if (!mobileVideoQuery.matches) return;
+
+    entries.forEach((entry) => {
+      const card = entry.target;
+      const video = card.querySelector("[data-video]");
+      if (!video || !card.classList.contains("has-video")) return;
+
+      if (entry.isIntersecting) {
+        const playAttempt = video.play();
+        card.classList.add("is-playing");
+        if (playAttempt && typeof playAttempt.catch === "function") {
+          playAttempt.catch(() => {
+            card.classList.remove("is-playing");
+          });
+        }
+        return;
+      }
+
+      card.classList.remove("is-playing");
+      video.pause();
+      video.currentTime = 0;
+    });
+  }, { threshold: 0.35 });
+
   workCards.forEach((card) => {
     const video = card.querySelector("[data-video]");
     if (!video) return;
@@ -2137,8 +2197,10 @@
     });
 
     video.addEventListener("error", disableVideo);
+    mobileVideoObserver.observe(card);
 
     const playVideo = () => {
+      if (mobileVideoQuery.matches) return;
       if (!card.classList.contains("has-video")) return;
       const playAttempt = video.play();
       card.classList.add("is-playing");
@@ -2150,6 +2212,7 @@
     };
 
     const resetVideo = () => {
+      if (mobileVideoQuery.matches) return;
       if (!card.classList.contains("has-video")) return;
       card.classList.remove("is-playing");
       video.pause();
