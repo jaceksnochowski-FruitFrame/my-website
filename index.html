@@ -425,6 +425,24 @@
     margin-top:1rem;
   }
 
+  .hero-mobile-panel{
+    display:none;
+  }
+
+  .hero-mobile-card{
+    background:rgba(11,11,11,0.92);
+    border:1px solid rgba(242,237,229,0.12);
+    padding:1.1rem;
+    box-shadow:var(--shadow);
+  }
+
+  .hero-mobile-card p{
+    margin:0;
+    color:var(--muted);
+    line-height:1.65;
+    font-size:1rem;
+  }
+
   .hero-scroll{
     color:var(--soft);
     font-size:0.8rem;
@@ -1387,21 +1405,42 @@
   }
 
   @media (max-width: 640px){
-    .hero-stage{min-height:92svh}
-    .hero-grid{min-height:92svh;padding:1.15rem}
+    .hero{padding:0}
+    .hero-stage{min-height:76svh}
+    .hero-overlay{
+      background:
+        linear-gradient(180deg, rgba(10,10,10,0.08) 0%, rgba(10,10,10,0.18) 42%, rgba(10,10,10,0.58) 100%),
+        linear-gradient(90deg, rgba(10,10,10,0.2) 0%, rgba(10,10,10,0.03) 55%, rgba(10,10,10,0.22) 100%);
+    }
+    .hero-grid{
+      min-height:76svh;
+      padding:1rem;
+      align-items:end;
+    }
     .hero-copy{
       max-width:100%;
-      padding-top:4.5rem;
+      padding-top:3.5rem;
+    }
+    .hero-copy .hero-kicker,
+    .hero-copy .hero-subhead,
+    .hero-side{
+      display:none;
     }
     .hero-name{
       max-width:100%;
-      font-size:clamp(2rem, 10.8vw, 3.7rem);
-      line-height:0.9;
+      margin-bottom:1.4rem;
+      font-size:clamp(2.15rem, 10vw, 3.7rem);
+      line-height:0.92;
       overflow-wrap:normal;
       word-break:keep-all;
     }
-    .hero-subhead{font-size:1rem}
     .hero-actions{flex-direction:column;align-items:stretch}
+    .hero-mobile-panel{
+      display:grid;
+      gap:0.85rem;
+      padding:1rem;
+      background:var(--bg);
+    }
     .hero-footer{align-items:flex-start;flex-direction:column}
     .section{padding:0 1rem}
     .content,
@@ -1410,7 +1449,8 @@
     .hero-stage,
     .hero-grid,
     .hero-copy,
-    .hero-side{
+    .hero-side,
+    .hero-mobile-panel{
       max-width:100%;
       min-width:0;
     }
@@ -1607,6 +1647,16 @@
                 <div class="hero-scroll">Scroll<span aria-hidden="true"></span></div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="hero-mobile-panel" aria-hidden="true">
+          <div class="hero-mobile-card">
+            <div class="hero-kicker">Director of Photography | Dublin / International</div>
+            <p>Dublin-based Director of Photography working across commercials, branded films, and performance-led projects. My background in dance shapes how I think about movement, rhythm, and how the camera sits with performance.</p>
+          </div>
+          <div class="hero-mobile-card">
+            <div class="small-label">What I Do</div>
+            <p>I work across commercials, branded films, and performance-led projects, with a strong focus on movement, rhythm, and making images that feel cinematic without losing clarity on set.</p>
           </div>
         </div>
       </section>
