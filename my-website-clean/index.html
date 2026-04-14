@@ -267,6 +267,12 @@
     background:#050505;
   }
 
+  body.mobile-video-fallback .hero-stage{
+    background-image:url("images/work-1.png");
+    background-size:cover;
+    background-position:center;
+  }
+
   .hero-video{
     position:absolute;
     inset:0;
@@ -574,6 +580,11 @@
     pointer-events:none;
     object-position:center center;
     transition:opacity .35s var(--ease);
+  }
+
+  body.mobile-video-fallback .hero-video,
+  body.mobile-video-fallback .work-video{
+    display:none;
   }
 
   .work-card.has-video.is-playing .work-video{
@@ -2257,6 +2268,14 @@
   const openLabButton = document.getElementById("openLabButton");
   const overlayClose = document.getElementById("overlayClose");
   const mobileVideoQuery = window.matchMedia("(hover: none), (pointer: coarse), (max-width: 900px)");
+  const userAgent = navigator.userAgent || "";
+  const isiOS = /iPad|iPhone|iPod/.test(userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const isInAppBrowser = /Instagram|FBAN|FBAV|Line|MicroMessenger/.test(userAgent);
+  const forcePosterFallback = isiOS || isInAppBrowser;
+
+  if (forcePosterFallback) {
+    body.classList.add("mobile-video-fallback");
+  }
 
   function safePlay(video) {
     const playAttempt = video.play();
@@ -2314,13 +2333,14 @@
     video.setAttribute("muted", "");
     video.setAttribute("playsinline", "");
     video.setAttribute("webkit-playsinline", "");
+    if (forcePosterFallback) return;
     video.load();
     tryPlay();
     video.addEventListener("loadedmetadata", tryPlay, { once: true });
     video.addEventListener("canplay", tryPlay, { once: true });
   });
 
-  if (heroVideo) {
+  if (heroVideo && !forcePosterFallback) {
     const ensureHeroPlayback = () => safePlay(heroVideo);
 
     window.addEventListener("load", ensureHeroPlayback, { once: true });
@@ -2333,6 +2353,7 @@
   }
 
   const mobileVideoObserver = new IntersectionObserver((entries) => {
+    if (forcePosterFallback) return;
     if (!mobileVideoQuery.matches) return;
 
     entries.forEach((entry) => {
@@ -2362,6 +2383,11 @@
   workCards.forEach((card) => {
     const video = card.querySelector("[data-video]");
     if (!video) return;
+
+    if (forcePosterFallback) {
+      card.classList.remove("has-video", "is-playing");
+      return;
+    }
 
     const disableVideo = () => {
       card.classList.remove("has-video", "is-playing");
