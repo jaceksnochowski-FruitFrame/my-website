@@ -33,6 +33,10 @@ SITE_CSS = """
   --body:"Manrope", sans-serif;
 }
 
+.post-header h1{font-size:clamp(2.1rem,5.5vw,4.5rem);max-width:20ch;line-height:1.04}
+.film-embed{aspect-ratio:16/9;margin:2rem 0}
+.film-embed iframe{width:100%;height:100%;border:0}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
@@ -392,6 +396,10 @@ class Post:
     body_markdown: str
     body_html: str
     source_path: Path
+    cover_alt: str = ""
+    seo_title: str = ""
+    meta_description: str = ""
+    video_id: str = ""
 
 
 def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
@@ -534,6 +542,10 @@ def load_posts() -> list[Post]:
     for source_path in sorted(CONTENT_DIR.glob("*.md")):
         raw_text = source_path.read_text(encoding="utf-8")
         metadata, body = parse_frontmatter(raw_text)
+        if not metadata.get("slug") or not metadata.get("date"):
+            raise ValueError(f"Refusing to rebuild: {source_path.name} needs explicit slug and date metadata. Reconcile legacy source with its published page first.")
+        if metadata.get("status", "published") not in {"approved", "published"}:
+            continue
         title = metadata.get("title") or source_path.stem
         slug = metadata.get("slug") or slugify(title)
         date_raw = metadata.get("date") or datetime.now().strftime("%Y-%m-%d")
@@ -553,6 +565,10 @@ def load_posts() -> list[Post]:
                 body_markdown=body,
                 body_html=markdown_to_html(body),
                 source_path=source_path,
+                cover_alt=metadata.get("cover_alt", title),
+                seo_title=metadata.get("seo_title", ""),
+                meta_description=metadata.get("meta_description", ""),
+                video_id=metadata.get("video_id", ""),
             )
         )
     posts.sort(key=lambda post: post.date, reverse=True)
@@ -604,7 +620,7 @@ def build_index(posts: list[Post]) -> str:
         if post.cover_image:
             cover_html = f"""
   <div class="post-card-image">
-    <img src="{html.escape(post.cover_image)}" alt="{html.escape(post.title)}">
+    <img src="{html.escape(post.cover_image)}" alt="{html.escape(post.cover_alt or post.title)}">
   </div>"""
         category_html = ""
         if post.categories:
@@ -658,8 +674,14 @@ def build_post(post: Post) -> str:
     if post.cover_image:
         cover_html = f"""
     <div class="post-cover">
-      <img src="{html.escape(post.cover_image)}" alt="{html.escape(post.title)}">
+      <img src="{html.escape(post.cover_image)}" alt="{html.escape(post.cover_alt or post.title)}">
     </div>"""
+    video_html = ""
+    if re.fullmatch(r"[A-Za-z0-9_-]{11}", post.video_id):
+        video_html = f'<div class="film-embed"><iframe src="https://www.youtube-nocookie.com/embed/{post.video_id}" title="{html.escape(post.title)} — music video" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>'
+    article_html = post.body_html
+    if video_html:
+        article_html = article_html.replace("<h2>Credits</h2>", video_html + "<h2>Credits</h2>")
     body = f"""
 <article>
   <header class="post-header">
@@ -674,15 +696,15 @@ def build_post(post: Post) -> str:
     {cover_html}
   </header>
   <div class="post-body">
-    {post.body_html}
+    {article_html}
   </div>
 </article>
 <div class="footer"><a href="/journal/">Back to the Journal</a></div>
 """
 
     return render_layout(
-        title=f"{post.title} | Journal | Jacek Snochowski",
-        description=post.excerpt,
+        title=post.seo_title or f"{post.title} | Journal | Jacek Snochowski",
+        description=post.meta_description or post.excerpt,
         body=body,
         canonical_path=f"/journal/{post.slug}/",
         active="journal",
