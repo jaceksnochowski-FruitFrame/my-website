@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tools | Jacek Snochowski</title>
+<meta name="description" content="Tools I built to speed up my own editing. JustSync syncs footage from every camera and audio recorder by sound and gives you a ready timeline for Premiere Pro, DaVinci Resolve and Final Cut.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://jaceksnochowski.com/tools/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/journal/assets/journal.css">
+<style>
+  .tool{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:1.6rem 2rem;
+    margin-top:2rem;
+    padding:clamp(1.35rem, 3vw, 2.2rem);
+    background:linear-gradient(180deg, rgba(242,237,229,0.03), rgba(242,237,229,0.01));
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+  }
+  .tool-icon{width:96px;height:96px}
+  .tool-head{display:grid;gap:0.7rem;align-content:start}
+  .tool h2{
+    margin:0;
+    font-family:var(--headline);
+    text-transform:uppercase;
+    line-height:1;
+    font-size:clamp(1.8rem, 4vw, 3rem);
+  }
+  .tool-lead{margin:0;color:var(--muted);line-height:1.7;font-size:1.05rem;max-width:40rem}
+  .tool-body{grid-column:1 / -1;display:grid;gap:1.6rem}
+  .tool-cols{display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1.6rem}
+  .tool h3{
+    margin:0 0 0.7rem;
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-size:0.74rem;
+    color:var(--soft);
+    font-weight:600;
+  }
+  .tool ul, .tool ol{margin:0;padding-left:1.15rem;color:var(--muted);line-height:1.75}
+  .tool li strong{color:var(--text);font-weight:600}
+  .download{display:flex;flex-wrap:wrap;align-items:center;gap:0.9rem 1.4rem}
+  .download-note{color:var(--soft);font-size:0.86rem;line-height:1.6}
+  @media (max-width:600px){
+    .tool{grid-template-columns:1fr}
+    .tool-icon{width:72px;height:72px}
+  }
+</style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="/">Jacek Snochowski</a>
+        <nav class="topnav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/journal/">Journal</a>
+          <a class="active" href="/tools/">Tools</a>
+          <a href="/#work">Work</a>
+          <a href="/#about">About</a>
+          <a href="/#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page">
+
+<section class="hero">
+  <div class="eyebrow">Made in the edit</div>
+  <h1>Tools</h1>
+  <p>I shoot and edit, and some jobs in the edit take far longer than they should. These are the tools I built to speed up my own work. Now you can use them too.</p>
+</section>
+
+<section class="tool" id="justsync">
+  <img class="tool-icon" src="/images/tools/justsync-icon.png" alt="JustSync app icon">
+  <div class="tool-head">
+    <div class="eyebrow">Mac app · Free 20-day trial</div>
+    <h2>JustSync</h2>
+    <p class="tool-lead">Drop in footage from all your cameras and audio recorders. JustSync lines everything up by sound and gives you a ready timeline for Premiere Pro, DaVinci Resolve or Final Cut. No clapper, no timecode, no lining up waveforms by hand.</p>
+  </div>
+  <div class="tool-body">
+    <div class="tool-cols">
+      <div>
+        <h3>What it does</h3>
+        <ul>
+          <li><strong>Syncs by sound:</strong> any number of cameras, phones and recorders.</li>
+          <li><strong>Music videos:</strong> syncs every take to the song, even when it's quiet in the background.</li>
+          <li><strong>Long takes:</strong> splits a clip where playback restarted, so every take lands on the song.</li>
+          <li><strong>Clean timelines:</strong> one clip per track, stairs layout, beat markers on the song.</li>
+          <li><strong>Exports:</strong> Premiere Pro XML (with multicam), FCPXML for Resolve and Final Cut.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Install</h3>
+        <ol>
+          <li>Download and open the file.</li>
+          <li>Drag JustSync into Applications.</li>
+          <li>Open JustSync. The first time, macOS may ask you to confirm. The "Read me first" file in the download shows how.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="download">
+      <a class="btn" href="https://github.com/jaceksnochowski-FruitFrame/my-website/releases/latest/download/JustSync.dmg">Download for Mac</a>
+      <a class="btn-ghost" href="mailto:jaceksnochowski@gmail.com?subject=JustSync">Feedback &amp; licence</a>
+      <div class="download-note">macOS 13 or newer · Apple Silicon and Intel<br>Works fully for 20 days. After that, get in touch for a licence key.</div>
+    </div>
+  </div>
+</section>
+
+    </main>
+  </div>
+</body>
+</html>

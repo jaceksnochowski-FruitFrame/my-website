@@ -598,6 +598,7 @@ def render_layout(title: str, description: str, body: str, canonical_path: str, 
         <nav class="topnav" aria-label="Primary">
           <a href="/">Home</a>
           <a class="{active if active == 'journal' else ''}" href="/journal/">Journal</a>
+          <a href="/tools/">Tools</a>
           <a href="/#work">Work</a>
           <a href="/#about">About</a>
           <a href="/#contact">Contact</a>
