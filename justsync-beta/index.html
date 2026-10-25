@@ -6,6 +6,15 @@
 <title>JustSync Beta | Jacek Snochowski</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="Private beta of JustSync, a Mac app that syncs every camera and audio recorder by sound.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JustSync – Private Beta">
+<meta property="og:description" content="Syncs every camera and recorder by sound. Ready timeline for Premiere, Resolve and Final Cut. Mac app.">
+<meta property="og:url" content="https://jaceksnochowski.com/justsync-beta/">
+<meta property="og:image" content="https://jaceksnochowski.com/images/tools/justsync-og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
@@ -51,6 +60,12 @@
   }
   .steps-note{color:var(--muted);line-height:1.7;margin:0}
   .beta-tag{justify-self:start;display:inline-block;padding:0.25rem 0.6rem;border:1px solid var(--line);font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--soft)}
+  .phone-note{display:none;margin:0 0 1.6rem;padding:1.2rem 1.3rem;border:1px solid #f3b23c;background:rgba(243,178,60,0.08)}
+  .is-phone .phone-note{display:block}
+  .phone-note strong{display:block;color:#f3b23c;text-transform:uppercase;letter-spacing:0.12em;font-size:0.78rem;margin-bottom:0.5rem}
+  .phone-note p{margin:0 0 1rem;color:var(--text);line-height:1.6}
+  .phone-note .row{display:flex;flex-wrap:wrap;gap:0.7rem}
+  .phone-note button.btn-ghost{cursor:pointer;font:inherit}
 </style>
 </head>
 <body>
@@ -67,6 +82,15 @@
       </div>
     </header>
     <main class="page">
+
+<div class="phone-note" id="phoneNote">
+  <strong>You're on your phone</strong>
+  <p>JustSync is a Mac app, so it won't install here. Send yourself this link and open it on your Mac.</p>
+  <div class="row">
+    <a class="btn" href="mailto:?subject=JustSync%20beta%20download&amp;body=Open%20this%20on%20your%20Mac%3A%20https%3A%2F%2Fjaceksnochowski.com%2Fjustsync-beta%2F">Email me the link</a>
+    <button class="btn-ghost" type="button" id="copyLink">Copy link</button>
+  </div>
+</div>
 
 <section class="hero">
   <div class="eyebrow">Private beta · Invite only</div>
@@ -94,6 +118,7 @@
           <li>Drag <strong>JustSync</strong> into <strong>Applications</strong>.</li>
           <li>Open JustSync from Applications.</li>
           <li>When it asks to access your drives or folders, click <strong>Allow</strong>. It needs to read your footage. Your files are never changed.</li>
+          <li>Got a licence key from me? Click <strong>Trial</strong> at the top of the app and paste it in.</li>
         </ol>
       </div>
       <div>
@@ -128,6 +153,19 @@
 </section>
 
     </main>
+<script>
+(function(){
+  var ua=navigator.userAgent||'';
+  if(/iPhone|iPod|Android|Mobile/i.test(ua)) document.documentElement.classList.add('is-phone');
+  var b=document.getElementById('copyLink');
+  if(b) b.addEventListener('click',function(){
+    var u='https://jaceksnochowski.com/justsync-beta/';
+    function done(){b.textContent='Copied!';}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(u).then(done,function(){prompt('Copy this link:',u);});}
+    else{prompt('Copy this link:',u);}
+  });
+})();
+</script>
   </div>
 </body>
 </html>
