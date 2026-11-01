@@ -78,3 +78,5 @@ If that sounds like what your school needs — get in touch.
 *Jacek Snochowski is a dance cinematographer and Steadicam operator based in Dublin. Creative Director of Fruit Frame Production Company. Owner of Fade Street Studios.*
 
 *[jaceksnochowski.com](https://jaceksnochowski.com)*
+
+Planning your next showcase? See my [multi-camera filming and video production services in Dublin](https://jaceksnochowski.com/video-production-dublin/).

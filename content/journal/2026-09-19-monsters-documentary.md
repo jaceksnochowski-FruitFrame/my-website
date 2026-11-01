@@ -43,3 +43,5 @@ The documentary follows the development of the show, from the creative process a
 - Residency: Draíocht, Blanchardstown
 
 [Have a documentary or arts project in mind? Get in touch.](https://jaceksnochowski.com/#contact)
+
+For documentary and arts projects, explore my [filming and video production services in Dublin](https://jaceksnochowski.com/video-production-dublin/).

@@ -368,6 +368,11 @@ img{display:block;max-width:100%}
     width:min(calc(100% - 1.5rem), var(--max));
   }
 
+  .topbar-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
   .topnav{
     gap:0.75rem 1rem;
   }
@@ -597,6 +602,7 @@ def render_layout(title: str, description: str, body: str, canonical_path: str, 
         <a class="brand" href="/">Jacek Snochowski</a>
         <nav class="topnav" aria-label="Primary">
           <a href="/">Home</a>
+          <a href="/video-production-dublin/">Video Production</a>
           <a class="{active if active == 'journal' else ''}" href="/journal/">Journal</a>
           <a href="/#work">Work</a>
           <a href="/#about">About</a>
@@ -653,7 +659,7 @@ def build_index(posts: list[Post]) -> str:
 <section class="posts">
   {''.join(cards)}
 </section>
-<div class="footer">New posts can be written in Markdown and rebuilt locally before pushing to GitHub.</div>
+<div class="footer"><a href="/video-production-dublin/">Video production in Dublin</a> · <a href="/#contact">Get in touch</a></div>
 """
 
     return render_layout(

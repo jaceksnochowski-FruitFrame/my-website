@@ -45,3 +45,5 @@ For me, this was the practical reason behind the restrictions. One camera, one l
 - Filming locations included [Tola Vintage](https://www.instagram.com/tolavintage/), Dublin
 
 [Planning a music video in Dublin or elsewhere? Get in touch to discuss filming or a larger production through FruitFrame.](https://jaceksnochowski.com/#contact)
+
+Planning a music video? Explore my [music video and video production services in Dublin](https://jaceksnochowski.com/video-production-dublin/).

@@ -39,3 +39,5 @@ I directed, shot, edited and colour graded the video, with production by FruitFr
 - Studio: Fade Street Studios
 
 [Got a music video in mind? Send me the idea.](https://jaceksnochowski.com/#contact)
+
+For a music video or acoustic performance, see my [video production services in Dublin](https://jaceksnochowski.com/video-production-dublin/).
