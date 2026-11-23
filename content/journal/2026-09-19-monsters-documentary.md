@@ -4,7 +4,7 @@ date: 2026-09-19
 slug: monsters-documentary
 excerpt: A year-long theatre project, several shoot days and one documentary: finding the story as Monsters developed.
 categories: Documentary, Behind the Scenes
-cover_image: /images/work-4-new.png
+cover_image: /images/work-4.webp
 cover_alt: Close-up from Monsters, with warm and cool lighting on a man wearing a red knitted hat.
 seo_title: Monsters: A Year-Long Theatre Documentary | Jacek Snochowski
 meta_description: Jacek Snochowski on directing, filming and editing Monsters: following a children’s theatre project over 12 months and shaping its final interviews.
