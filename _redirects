@@ -1,0 +1,6 @@
+# Old full copy of the site, kept in the repo but no longer served.
+# Send every path to the same path on the live site (path-preserving, permanent).
+/my-website-clean / 301
+/my-website-clean/ / 301
+/my-website-clean/index.html / 301
+/my-website-clean/* /:splat 301

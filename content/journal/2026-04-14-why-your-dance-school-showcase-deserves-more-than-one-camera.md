@@ -79,4 +79,4 @@ If that sounds like what your school needs — get in touch.
 
 *[jaceksnochowski.com](https://jaceksnochowski.com)*
 
-Planning your next showcase? See my [multi-camera filming and video production services in Dublin](https://jaceksnochowski.com/video-production-dublin/).
+Planning your next showcase? See my [multi-camera filming for dance shows and theatre in Dublin](https://jaceksnochowski.com/multicamera-filming-dublin/), or my wider [video production services](https://jaceksnochowski.com/video-production-dublin/).
